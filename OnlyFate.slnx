@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/OnlyFate.Database/OnlyFate.Database.csproj" />
+    <Project Path="src/OnlyFate.Desktop/OnlyFate.Desktop.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/OnlyFate.Database.Tests/OnlyFate.Database.Tests.csproj" />
+    <Project Path="tests/OnlyFate.Desktop.Tests/OnlyFate.Desktop.Tests.csproj" />
+  </Folder>
+</Solution>

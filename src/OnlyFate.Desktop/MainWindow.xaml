@@ -1,0 +1,161 @@
+<Window x:Class="OnlyFate.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:views="clr-namespace:OnlyFate.Desktop.Views"
+        Title="OnlyFate｜新生兒取名"
+        Width="1280" Height="860" MinWidth="1000" MinHeight="640"
+        WindowStartupLocation="CenterScreen"
+        Background="#FCFAF6" Foreground="#173F36"
+        FontFamily="Microsoft JhengHei UI" FontSize="14"
+        AutomationProperties.AutomationId="OnlyFateMainWindow">
+    <Window.Resources>
+        <ResourceDictionary><ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="DesktopTheme.xaml" />
+        </ResourceDictionary.MergedDictionaries></ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="22,18,22,14">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Border Background="#173F36" CornerRadius="12" Padding="22,16" Margin="0,0,0,18">
+            <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="Auto" /></Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Width="3" Background="#C6A567" CornerRadius="2" Margin="0,1,16,1" />
+                    <TextBlock Text="OnlyFate" FontFamily="Georgia" FontSize="30" Foreground="#FCFAF6" VerticalAlignment="Center" />
+                    <Border Width="1" Background="#527064" Margin="20,5" />
+                    <StackPanel VerticalAlignment="Center">
+                        <TextBlock Text="新生兒取名" FontSize="17" FontWeight="SemiBold" Foreground="#FCFAF6" />
+                        <TextBlock x:Name="ModeBanner" Text="取名報告工作區" FontSize="12" Foreground="#D4DED6" Margin="0,5,0,0" MaxWidth="440" TextWrapping="Wrap" />
+                    </StackPanel>
+                </StackPanel>
+                <Border Grid.Column="1" Background="#284E42" CornerRadius="14" Padding="12,6" VerticalAlignment="Center">
+                    <TextBlock Text="研究試行版" FontSize="12" Foreground="#E6D5AE" />
+                </Border>
+            </Grid>
+        </Border>
+        <Grid x:Name="Workspace" Grid.Row="1" IsEnabled="False">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Border Background="#F3F2EA" BorderBrush="#E3E1D6" BorderThickness="1" CornerRadius="12" Padding="16" Margin="0,0,16,0">
+                <Grid>
+                    <Grid.RowDefinitions><RowDefinition Height="Auto" /><RowDefinition Height="Auto" /><RowDefinition Height="*" /><RowDefinition Height="Auto" /></Grid.RowDefinitions>
+                    <StackPanel><TextBlock Text="案件清單" FontSize="17" FontWeight="SemiBold" /><TextBlock Text="儲存於這部電腦" FontSize="12" Foreground="#64716B" Margin="0,5,0,0" /></StackPanel>
+                    <Button Grid.Row="1" Content="＋ 新增案件" AutomationProperties.Name="新增案件" Click="NewCase" Padding="12,8" Margin="0,16,0,12" />
+                    <ListBox x:Name="CaseList" Grid.Row="2" BorderThickness="0" Background="Transparent"
+                             HorizontalContentAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled" MouseDoubleClick="OpenSelectedCase" AutomationProperties.Name="案件清單">
+                        <ListBox.ItemTemplate><DataTemplate>
+                            <StackPanel Margin="0,3">
+                                <TextBlock Text="{Binding DisplayTitle}" TextWrapping="Wrap" FontWeight="SemiBold" />
+                                <TextBlock Text="{Binding RevisionLabel}" FontSize="12" Foreground="#64716B" Margin="0,6,0,0" />
+                            </StackPanel>
+                        </DataTemplate></ListBox.ItemTemplate>
+                    </ListBox>
+                    <Button Grid.Row="3" Content="開啟選取案件" Click="OpenSelectedCase" Padding="12,8" Margin="0,12,0,0" />
+                </Grid>
+            </Border>
+            <Border Grid.Column="1" Background="White" BorderBrush="#E6E2D8" BorderThickness="1" CornerRadius="12" Padding="20,16">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <DockPanel Margin="0,0,0,16" LastChildFill="True">
+                        <Button DockPanel.Dock="Right" Content="儲存案件" Click="SaveCase" Padding="24,9" Style="{StaticResource PrimaryButton}" />
+                        <StackPanel VerticalAlignment="Center" Margin="0,0,14,0"><TextBlock Text="案件工作區" FontSize="11" Foreground="#A68145" Margin="0,0,0,4" /><TextBlock x:Name="CaseHeading" Text="新案件" FontSize="22" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" /></StackPanel>
+                    </DockPanel>
+                    <TabControl x:Name="WorkspaceTabs" Grid.Row="1" BorderThickness="0" Background="White">
+                        <TabItem Header="案件資料">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled" Margin="0,10,0,0">
+                                <views:CaseInputView x:Name="CaseForm" />
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="出生地與排盤">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                                <StackPanel Margin="12,20,12,12">
+                                    <TextBlock Text="先確認出生地，再取得命盤" FontSize="20" FontWeight="SemiBold" />
+                                    <TextBlock Text="依已儲存的國家與城市查詢；出生時間使用當地鐘錶時間。" TextWrapping="Wrap" Margin="0,8,0,16" Foreground="#64716B" />
+                                    <Button Content="查找出生城市" Click="FindBirthplace" HorizontalAlignment="Left" Padding="20,8" />
+                                    <ComboBox x:Name="BirthplaceCandidates" DisplayMemberPath="Display" Margin="0,12,0,8" MinHeight="34"
+                                              SelectionChanged="BirthplaceChanged" AutomationProperties.Name="出生城市候選" />
+                                    <CheckBox x:Name="AcceptCityPoint" Content="確認採用這個城市代表點（尚未定位醫院或詳細地址）" Margin="0,4,0,12" />
+                                    <TextBlock Text="以城市經度校正真太陽時；接近時辰或換日邊界時，城市代表點的誤差可能影響結果。找不到城市或不接受此精度時，請先核對出生地。"
+                                               TextWrapping="Wrap" Foreground="#64716B" LineHeight="23" />
+                                    <Button Content="確認並排盤" Click="CalculateChart" HorizontalAlignment="Left" Padding="24,9" Margin="0,18,0,20"
+                                            Style="{StaticResource PrimaryButton}" />
+                                    <Border Background="#F4F5EE" CornerRadius="8" Padding="20">
+                                        <StackPanel>
+                                            <TextBlock x:Name="ChartStatus" Text="尚未排盤" FontWeight="SemiBold" FontSize="18" />
+                                            <TextBlock x:Name="ChartPillars" FontSize="22" FontWeight="SemiBold" Margin="0,14,0,0" TextWrapping="Wrap" />
+                                            <TextBlock x:Name="ChartDetails" Text="請先儲存案件，再查找出生城市。" Margin="0,12,0,0" TextWrapping="Wrap" LineHeight="25" />
+                                        </StackPanel>
+                                    </Border>
+                                    <TextBlock Text="出生地資料：GeoNames https://www.geonames.org/（CC BY 4.0：https://creativecommons.org/licenses/by/4.0/）。城市代表點，不代表詳細地址座標。" FontSize="12" Foreground="#64716B" TextWrapping="Wrap" Margin="0,16,0,0" />
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="AI 試行判讀">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                <StackPanel Margin="16">
+                                    <TextBlock Text="Step 3｜試行判讀" FontSize="20" FontWeight="SemiBold" />
+                                    <TextBlock Text="規則尚未完成案例驗證，結果僅供開發檢查，不直接作為正式選名依據。按開始會將本次必要案件資料及備註送往 OpenAI。" TextWrapping="Wrap" Margin="0,10,0,16" />
+                                    <TextBlock Text="共用 OpenAI 模型 ID（Step 3–5）" />
+                                    <TextBox x:Name="AnalysisModel" MinHeight="30" Margin="0,6,0,12" />
+                                    <TextBlock Text="API key（僅本次程式使用，不儲存）" />
+                                    <PasswordBox x:Name="AnalysisKey" MinHeight="30" Margin="0,6,0,12" />
+                                    <Button Content="清除本次 API key" Click="ClearCredential" Style="{StaticResource QuietButton}" HorizontalAlignment="Left" Padding="12,6" Margin="0,0,0,10" />
+                                    <WrapPanel>
+                                        <Button Content="查看本次 context" Click="PreviewAnalysis" Padding="12,8" Margin="0,0,10,0" />
+                                        <Button Content="開始試行判讀" Click="AnalyzeCase" Style="{StaticResource PrimaryButton}" Padding="12,8" />
+                                    </WrapPanel>
+                                    <TextBlock x:Name="AnalysisStatus" Text="請先儲存案件並完成排盤。" TextWrapping="Wrap" Margin="0,14,0,10" FontWeight="SemiBold" />
+                                    <TextBox x:Name="AnalysisDetails" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" MinHeight="280" VerticalScrollBarVisibility="Auto" />
+                                </StackPanel>
+                            </ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="取名配置">
+                            <ScrollViewer VerticalScrollBarVisibility="Auto"><StackPanel Margin="16">
+                                <TextBlock Text="Step 4｜試行選名與配置" FontSize="20" FontWeight="SemiBold" />
+                                <TextBlock Text="沿用判讀頁的模型與本次 API key；提供兩組已檢查字池；每組含一個主推與四個替代，組內可自由配字。" TextWrapping="Wrap" Margin="0,10" />
+                                <WrapPanel><Button Content="查看選名 request" Click="PreviewNaming" Padding="12,8" Margin="0,0,10,0"/><Button Content="開始試行選名" Click="NameCase" Style="{StaticResource PrimaryButton}" Padding="12,8" /></WrapPanel>
+                                <TextBlock x:Name="NamingStatus" Text="請先完成可繼續試行的判讀。" TextWrapping="Wrap" Margin="0,14" FontWeight="SemiBold" />
+                                <TextBox x:Name="NamingDetails" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" MinHeight="200" VerticalScrollBarVisibility="Auto" />
+                            </StackPanel></ScrollViewer>
+                        </TabItem>
+                        <TabItem Header="報告預覽">
+                            <Grid Margin="0,12,0,0">
+                                <Grid.RowDefinitions><RowDefinition Height="Auto"/><RowDefinition Height="*"/><RowDefinition Height="Auto"/></Grid.RowDefinitions>
+                                <StackPanel Margin="0,0,0,10">
+                                    <WrapPanel><Button Content="查看報告 request" Click="PreviewReport" Padding="10,7" Margin="0,0,8,6"/><Button Content="生成試行報告" Click="GenerateReport" Style="{StaticResource PrimaryButton}" Padding="10,7" Margin="0,0,8,6"/><Button x:Name="RebuildReportButton" Content="重建報告檔案（不呼叫 AI）" Click="RebuildReport" IsEnabled="False" Padding="10,7" Margin="0,0,8,6"/><Button x:Name="ExportHtmlButton" Content="匯出 HTML" Click="ExportHtml" IsEnabled="False" Padding="10,7" Margin="0,0,8,6"/><Button x:Name="ExportPdfButton" Content="產生／匯出 PDF" Click="ExportPdf" Style="{StaticResource PrimaryButton}" IsEnabled="False" Padding="10,7" Margin="0,0,8,6"/></WrapPanel>
+                                    <TextBlock x:Name="ReportStatus" Text="請先完成取名配置。" TextWrapping="Wrap" />
+                                </StackPanel>
+                                <wv2:WebView2 x:Name="ReportPreview" Grid.Row="1" AutomationProperties.AutomationId="ReportPreview" />
+                                <Border x:Name="PreviewMessage" Grid.Row="1" Background="#FCFAF6" Padding="24"><StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="450">
+                                    <TextBlock x:Name="PreviewMessageTitle" Text="尚未產生報告" FontSize="20" FontWeight="SemiBold" TextAlignment="Center"/>
+                                    <TextBlock x:Name="PreviewMessageDetail" Text="請先完成選名，再生成試行報告。" TextWrapping="Wrap" TextAlignment="Center" Margin="0,12,0,0"/>
+                                </StackPanel></Border>
+                                <TextBlock x:Name="PreviewStatus" Grid.Row="2" Text="HTML：未就緒｜PDF：未就緒" Margin="0,10,0,0"/>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="執行紀錄" AutomationProperties.Name="request 與執行紀錄"><Grid Margin="12"><Grid.RowDefinitions><RowDefinition Height="*"/><RowDefinition Height="*"/></Grid.RowDefinitions>
+                            <GroupBox Header="實際 request（尚未呼叫）"><TextBox x:Name="RequestDetails" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"/></GroupBox>
+                            <GroupBox Header="本案件最近執行紀錄" Grid.Row="1" Margin="0,12,0,0"><TextBox x:Name="HistoryDetails" IsReadOnly="True" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/></GroupBox>
+                        </Grid></TabItem>
+                    </TabControl>
+                </Grid>
+            </Border>
+        </Grid>
+        <DockPanel Grid.Row="2" Margin="0,14,0,0">
+            <Button x:Name="CancelChartButton" DockPanel.Dock="Right" Content="取消處理" Click="CancelChart" Padding="16,6" Margin="16,0,0,0" Visibility="Collapsed" />
+        <Button x:Name="OpenDemoButton" DockPanel.Dock="Right" Content="開啟離線示範" Click="OpenDemo" Style="{StaticResource QuietButton}" Padding="12,6" Margin="12,0,0,0" />
+        <TextBlock x:Name="CaseMessage" Foreground="#425B51"
+                   Text="正在開啟本機案件資料…" TextWrapping="Wrap" MaxHeight="100"
+                   AutomationProperties.LiveSetting="Polite" />
+        </DockPanel>
+    </Grid>
+</Window>
+

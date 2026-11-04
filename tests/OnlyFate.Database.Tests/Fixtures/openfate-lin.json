@@ -1,0 +1,472 @@
+{
+  "recordType": "synthetic test fixture from real local MCP calls; not customer data",
+  "input": {
+    "year": 2026,
+    "month": 6,
+    "day": 15,
+    "hour": 12,
+    "minute": 0,
+    "second": 0,
+    "gender": "male",
+    "longitude": 121.52639,
+    "timezone": 8,
+    "timezoneId": "Asia/Taipei",
+    "dstOffset": 0,
+    "calendarType": "solar",
+    "enableTrueSolarTime": true,
+    "dayBoundaryMode": "ZI_HOUR_23"
+  },
+  "policy": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"data\": {\n    \"policy\": {\n      \"defaultTrueSolarTime\": true,\n      \"defaultDayBoundaryMode\": \"ZI_HOUR_23\",\n      \"daYunTimingVersion\": \"DAYUN_SECOND_V2\",\n      \"daYunTimingGuidance\": \"Present an exact onset only when chart.daYun.timing.status is CALCULATED and version is DAYUN_SECOND_V2. UNAVAILABLE retains legacy scalar fields only as an explicitly labeled fallback.\",\n      \"dayBoundaryMeaning\": \"ZI_HOUR_23 means 23:00-23:59 is calculated with the next day pillar.\",\n      \"locationGuidance\": \"For professional accuracy, pass longitude plus timezone or timezoneId. Do not rely on city-name guessing.\",\n      \"dstGuidance\": \"If birth certificate time includes daylight saving time, pass dstOffset so the physical solar time is corrected.\",\n      \"reverseLookupGuidance\": \"Use reverse_bazi_to_solar_times only as a candidate finder, then recalculate with location data.\",\n      \"interactionGuidance\": \"Branch interactions are raw relationship occurrences identified by pillar roles. Preserve duplicate branch positions and distinct annual/dayun roles. COMBINATION_HALF requires a central branch (子午卯酉); a full trine does not erase its half-trine occurrences. targetElement is a relationship affinity; legacy resultElement on TRINE/DIRECTIONAL has the same affinity-only meaning. NOT_EVALUATED means transformation was not assessed, not that it formed or failed. Do not treat occurrences as additive weights or automatically cancel clashes.\"\n    },\n    \"resources\": {\n      \"home\": \"https://openfate.ai\",\n      \"baziChart\": \"https://openfate.ai/en/bazi-chart\",\n      \"baziAnalysis\": \"https://openfate.ai/en/bazi\",\n      \"compatibility\": \"https://openfate.ai/en/compatibility/bazi/marriage\",\n      \"wealthAnalysis\": \"https://openfate.ai/en/wealth\",\n      \"trueSolarTimeGuide\": \"https://openfate.ai/en/insights/true-solar-time\",\n      \"llmsTxt\": \"https://openfate.ai/llms.txt\"\n    }\n  },\n  \"attribution\": {\n    \"brand\": \"OpenFate.ai\",\n    \"url\": \"https://openfate.ai\",\n    \"engine\": \"@openfate/bazi-engine\",\n    \"trueSolarTimeEngine\": \"@openfate/true-solar-time\",\n    \"languages\": [\n      \"English\",\n      \"简体中文\",\n      \"繁體中文\",\n      \"日本語\"\n    ]\n  }\n}"
+      }
+    ],
+    "structuredContent": {
+      "data": {
+        "policy": {
+          "defaultTrueSolarTime": true,
+          "defaultDayBoundaryMode": "ZI_HOUR_23",
+          "daYunTimingVersion": "DAYUN_SECOND_V2",
+          "daYunTimingGuidance": "Present an exact onset only when chart.daYun.timing.status is CALCULATED and version is DAYUN_SECOND_V2. UNAVAILABLE retains legacy scalar fields only as an explicitly labeled fallback.",
+          "dayBoundaryMeaning": "ZI_HOUR_23 means 23:00-23:59 is calculated with the next day pillar.",
+          "locationGuidance": "For professional accuracy, pass longitude plus timezone or timezoneId. Do not rely on city-name guessing.",
+          "dstGuidance": "If birth certificate time includes daylight saving time, pass dstOffset so the physical solar time is corrected.",
+          "reverseLookupGuidance": "Use reverse_bazi_to_solar_times only as a candidate finder, then recalculate with location data.",
+          "interactionGuidance": "Branch interactions are raw relationship occurrences identified by pillar roles. Preserve duplicate branch positions and distinct annual/dayun roles. COMBINATION_HALF requires a central branch (子午卯酉); a full trine does not erase its half-trine occurrences. targetElement is a relationship affinity; legacy resultElement on TRINE/DIRECTIONAL has the same affinity-only meaning. NOT_EVALUATED means transformation was not assessed, not that it formed or failed. Do not treat occurrences as additive weights or automatically cancel clashes."
+        },
+        "resources": {
+          "home": "https://openfate.ai",
+          "baziChart": "https://openfate.ai/en/bazi-chart",
+          "baziAnalysis": "https://openfate.ai/en/bazi",
+          "compatibility": "https://openfate.ai/en/compatibility/bazi/marriage",
+          "wealthAnalysis": "https://openfate.ai/en/wealth",
+          "trueSolarTimeGuide": "https://openfate.ai/en/insights/true-solar-time",
+          "llmsTxt": "https://openfate.ai/llms.txt"
+        }
+      },
+      "attribution": {
+        "brand": "OpenFate.ai",
+        "url": "https://openfate.ai",
+        "engine": "@openfate/bazi-engine",
+        "trueSolarTimeEngine": "@openfate/true-solar-time",
+        "languages": [
+          "English",
+          "简体中文",
+          "繁體中文",
+          "日本語"
+        ]
+      }
+    }
+  },
+  "response": {
+    "content": [
+      {
+        "type": "text",
+        "text": "{\n  \"data\": {\n    \"chart\": {\n      \"pillars\": {\n        \"year\": {\n          \"stem\": \"丙\",\n          \"branch\": \"午\",\n          \"element\": \"fire\",\n          \"ganZhi\": \"丙午\",\n          \"stemPolarity\": \"yang\",\n          \"stemTenGod\": \"七杀\",\n          \"branchElement\": \"fire\",\n          \"hiddenStems\": [\n            {\n              \"stem\": \"丁\",\n              \"element\": \"fire\",\n              \"polarity\": \"yin\",\n              \"tenGod\": \"正官\",\n              \"isMain\": true\n            },\n            {\n              \"stem\": \"己\",\n              \"element\": \"earth\",\n              \"polarity\": \"yin\",\n              \"tenGod\": \"正印\",\n              \"isMain\": false\n            }\n          ],\n          \"naYin\": \"天河水\",\n          \"xun\": \"甲辰\",\n          \"voidBranches\": [\n            \"寅\",\n            \"卯\"\n          ],\n          \"growthStage\": \"沐浴\"\n        },\n        \"month\": {\n          \"stem\": \"甲\",\n          \"branch\": \"午\",\n          \"element\": \"wood\",\n          \"ganZhi\": \"甲午\",\n          \"stemPolarity\": \"yang\",\n          \"stemTenGod\": \"偏财\",\n          \"branchElement\": \"fire\",\n          \"hiddenStems\": [\n            {\n              \"stem\": \"丁\",\n              \"element\": \"fire\",\n              \"polarity\": \"yin\",\n              \"tenGod\": \"正官\",\n              \"isMain\": true\n            },\n            {\n              \"stem\": \"己\",\n              \"element\": \"earth\",\n              \"polarity\": \"yin\",\n              \"tenGod\": \"正印\",\n              \"isMain\": false\n            }\n          ],\n          \"naYin\": \"沙中金\",\n          \"xun\": \"甲午\",\n          \"voidBranches\": [\n            \"辰\",\n            \"巳\"\n          ],\n          \"growthStage\": \"沐浴\"\n        },\n        \"day\": {\n          \"stem\": \"庚\",\n          \"branch\": \"申\",\n          \"element\": \"metal\",\n          \"ganZhi\": \"庚申\",\n          \"stemPolarity\": \"yang\",\n          \"stemTenGod\": \"日主\",\n          \"branchElement\": \"metal\",\n          \"hiddenStems\": [\n            {\n              \"stem\": \"庚\",\n              \"element\": \"metal\",\n              \"polarity\": \"yang\",\n              \"tenGod\": \"比肩\",\n              \"isMain\": true\n            },\n            {\n              \"stem\": \"壬\",\n              \"element\": \"water\",\n              \"polarity\": \"yang\",\n              \"tenGod\": \"食神\",\n              \"isMain\": false\n            },\n            {\n              \"stem\": \"戊\",\n              \"element\": \"earth\",\n              \"polarity\": \"yang\",\n              \"tenGod\": \"偏印\",\n              \"isMain\": false\n            }\n          ],\n          \"naYin\": \"石榴木\",\n          \"xun\": \"甲寅\",\n          \"voidBranches\": [\n            \"子\",\n            \"丑\"\n          ],\n          \"growthStage\": \"临官\"\n        },\n        \"hour\": {\n          \"stem\": \"壬\",\n          \"branch\": \"午\",\n          \"element\": \"water\",\n          \"ganZhi\": \"壬午\",\n          \"stemPolarity\": \"yang\",\n          \"stemTenGod\": \"食神\",\n          \"branchElement\": \"fire\",\n          \"hiddenStems\": [\n            {\n              \"stem\": \"丁\",\n              \"element\": \"fire\",\n              \"polarity\": \"yin\",\n              \"tenGod\": \"正官\",\n              \"isMain\": true\n            },\n            {\n              \"stem\": \"己\",\n              \"element\": \"earth\",\n              \"polarity\": \"yin\",\n              \"tenGod\": \"正印\",\n              \"isMain\": false\n            }\n          ],\n          \"naYin\": \"杨柳木\",\n          \"xun\": \"甲戌\",\n          \"voidBranches\": [\n            \"申\",\n            \"酉\"\n          ],\n          \"growthStage\": \"沐浴\"\n        }\n      },\n      \"dayMaster\": {\n        \"char\": \"庚\",\n        \"pinyin\": \"geng\",\n        \"element\": \"metal\",\n        \"polarity\": \"yang\"\n      },\n      \"daYun\": {\n        \"cycles\": [\n          {\n            \"index\": 1,\n            \"stem\": \"乙\",\n            \"branch\": \"未\",\n            \"ganZhi\": \"乙未\",\n            \"startYear\": 2033,\n            \"startAge\": 7,\n            \"endYear\": 2042,\n            \"endAge\": 16,\n            \"stemTenGod\": \"正财\",\n            \"branchTenGod\": \"正印\"\n          },\n          {\n            \"index\": 2,\n            \"stem\": \"丙\",\n            \"branch\": \"申\",\n            \"ganZhi\": \"丙申\",\n            \"startYear\": 2043,\n            \"startAge\": 17,\n            \"endYear\": 2052,\n            \"endAge\": 26,\n            \"stemTenGod\": \"七杀\",\n            \"branchTenGod\": \"比肩\"\n          },\n          {\n            \"index\": 3,\n            \"stem\": \"丁\",\n            \"branch\": \"酉\",\n            \"ganZhi\": \"丁酉\",\n            \"startYear\": 2053,\n            \"startAge\": 27,\n            \"endYear\": 2062,\n            \"endAge\": 36,\n            \"stemTenGod\": \"正官\",\n            \"branchTenGod\": \"劫财\"\n          },\n          {\n            \"index\": 4,\n            \"stem\": \"戊\",\n            \"branch\": \"戌\",\n            \"ganZhi\": \"戊戌\",\n            \"startYear\": 2063,\n            \"startAge\": 37,\n            \"endYear\": 2072,\n            \"endAge\": 46,\n            \"stemTenGod\": \"偏印\",\n            \"branchTenGod\": \"偏印\"\n          },\n          {\n            \"index\": 5,\n            \"stem\": \"己\",\n            \"branch\": \"亥\",\n            \"ganZhi\": \"己亥\",\n            \"startYear\": 2073,\n            \"startAge\": 47,\n            \"endYear\": 2082,\n            \"endAge\": 56,\n            \"stemTenGod\": \"正印\",\n            \"branchTenGod\": \"食神\"\n          },\n          {\n            \"index\": 6,\n            \"stem\": \"庚\",\n            \"branch\": \"子\",\n            \"ganZhi\": \"庚子\",\n            \"startYear\": 2083,\n            \"startAge\": 57,\n            \"endYear\": 2092,\n            \"endAge\": 66,\n            \"stemTenGod\": \"比肩\",\n            \"branchTenGod\": \"伤官\"\n          },\n          {\n            \"index\": 7,\n            \"stem\": \"辛\",\n            \"branch\": \"丑\",\n            \"ganZhi\": \"辛丑\",\n            \"startYear\": 2093,\n            \"startAge\": 67,\n            \"endYear\": 2102,\n            \"endAge\": 76,\n            \"stemTenGod\": \"劫财\",\n            \"branchTenGod\": \"正印\"\n          },\n          {\n            \"index\": 8,\n            \"stem\": \"壬\",\n            \"branch\": \"寅\",\n            \"ganZhi\": \"壬寅\",\n            \"startYear\": 2103,\n            \"startAge\": 77,\n            \"endYear\": 2112,\n            \"endAge\": 86,\n            \"stemTenGod\": \"食神\",\n            \"branchTenGod\": \"偏财\"\n          },\n          {\n            \"index\": 9,\n            \"stem\": \"癸\",\n            \"branch\": \"卯\",\n            \"ganZhi\": \"癸卯\",\n            \"startYear\": 2113,\n            \"startAge\": 87,\n            \"endYear\": 2122,\n            \"endAge\": 96,\n            \"stemTenGod\": \"伤官\",\n            \"branchTenGod\": \"正财\"\n          }\n        ],\n        \"isForward\": true,\n        \"startYear\": 2033,\n        \"startAge\": 7,\n        \"startDate\": \"2033-10-05 05:00:00\",\n        \"startOffset\": {\n          \"years\": 7,\n          \"months\": 3,\n          \"days\": 19,\n          \"hours\": 17\n        },\n        \"timing\": {\n          \"status\": \"CALCULATED\",\n          \"version\": \"DAYUN_SECOND_V2\",\n          \"intervalBasis\": \"CIVIL_INSTANT\",\n          \"conversionPolicy\": \"THREE_DAYS_PER_YEAR\",\n          \"termProvider\": \"lunar-javascript\",\n          \"termProviderVersion\": \"1.7.7\",\n          \"termTimezone\": \"UTC+08:00\",\n          \"selectionPolicy\": \"PREVIOUS_INCLUSIVE_NEXT_EXCLUSIVE\",\n          \"rounding\": \"WHOLE_SYMBOLIC_HOUR_FLOOR\",\n          \"startDateBasis\": \"NOMINAL_BIRTHPLACE_CIVIL\",\n          \"timezoneSource\": \"NUMERIC_OFFSET\",\n          \"timezoneBasis\": 8,\n          \"timezoneDatabase\": \"NOT_APPLICABLE\",\n          \"disambiguation\": \"REJECT\",\n          \"resolvedOffsetSeconds\": 28800,\n          \"birthUtc\": \"2026-06-15T04:00:00Z\",\n          \"jieName\": \"小暑\",\n          \"jieUtc\": \"2026-07-07T01:56:57Z\",\n          \"intervalSeconds\": 1893417,\n          \"sourceRemainderSeconds\": 27\n        }\n      },\n      \"interactions\": [\n        {\n          \"id\": \"PUNISHMENT:year:午|month:午\",\n          \"type\": \"PUNISHMENT\",\n          \"branches\": [\n            \"午\",\n            \"午\"\n          ],\n          \"pillars\": [\n            \"year\",\n            \"month\"\n          ],\n          \"transformationStatus\": \"NOT_APPLICABLE\",\n          \"description\": \"Self-Punishment (自刑) — 午午\"\n        },\n        {\n          \"id\": \"PUNISHMENT:year:午|hour:午\",\n          \"type\": \"PUNISHMENT\",\n          \"branches\": [\n            \"午\",\n            \"午\"\n          ],\n          \"pillars\": [\n            \"year\",\n            \"hour\"\n          ],\n          \"transformationStatus\": \"NOT_APPLICABLE\",\n          \"description\": \"Self-Punishment (自刑) — 午午\"\n        },\n        {\n          \"id\": \"PUNISHMENT:month:午|hour:午\",\n          \"type\": \"PUNISHMENT\",\n          \"branches\": [\n            \"午\",\n            \"午\"\n          ],\n          \"pillars\": [\n            \"month\",\n            \"hour\"\n          ],\n          \"transformationStatus\": \"NOT_APPLICABLE\",\n          \"description\": \"Self-Punishment (自刑) — 午午\"\n        }\n      ],\n      \"solarTimeInfo\": {\n        \"trueSolarTime\": \"12:05\",\n        \"trueSolarDateTime\": \"2026-06-15 12:05:39\",\n        \"solarDate\": \"2026-06-15\",\n        \"standardMeridian\": 120,\n        \"longitudeCorrectionMinutes\": 6.105559999999969,\n        \"equationOfTimeMinutes\": -0.45190288403709233,\n        \"algorithm\": \"meeus\"\n      },\n      \"calendar\": {\n        \"inputType\": \"solar\",\n        \"civilSolar\": {\n          \"year\": 2026,\n          \"month\": 6,\n          \"day\": 15,\n          \"hour\": 12,\n          \"minute\": 0,\n          \"second\": 0\n        },\n        \"calculationSolar\": {\n          \"year\": 2026,\n          \"month\": 6,\n          \"day\": 15,\n          \"hour\": 12,\n          \"minute\": 5,\n          \"second\": 39\n        },\n        \"lunar\": {\n          \"year\": 2026,\n          \"month\": 5,\n          \"day\": 1,\n          \"hour\": 12,\n          \"minute\": 5,\n          \"second\": 39,\n          \"isLeapMonth\": false\n        },\n        \"zodiac\": \"马\"\n      },\n      \"metadata\": {\n        \"trueSolarTimeApplied\": true,\n        \"dayBoundaryMode\": \"ZI_HOUR_23\",\n        \"longitude\": 121.52639,\n        \"timezoneBasis\": 8,\n        \"dstOffset\": 0,\n        \"daYunTimingVersion\": \"DAYUN_SECOND_V2\"\n      }\n    },\n    \"policy\": {\n      \"enableTrueSolarTime\": true,\n      \"dayBoundaryMode\": \"ZI_HOUR_23\",\n      \"daYunTimingVersion\": \"DAYUN_SECOND_V2\",\n      \"timezoneBasis\": \"Asia/Taipei\"\n    }\n  },\n  \"attribution\": {\n    \"brand\": \"OpenFate.ai\",\n    \"url\": \"https://openfate.ai\",\n    \"engine\": \"@openfate/bazi-engine\",\n    \"trueSolarTimeEngine\": \"@openfate/true-solar-time\",\n    \"languages\": [\n      \"English\",\n      \"简体中文\",\n      \"繁體中文\",\n      \"日本語\"\n    ]\n  }\n}"
+      }
+    ],
+    "structuredContent": {
+      "data": {
+        "chart": {
+          "pillars": {
+            "year": {
+              "stem": "丙",
+              "branch": "午",
+              "element": "fire",
+              "ganZhi": "丙午",
+              "stemPolarity": "yang",
+              "stemTenGod": "七杀",
+              "branchElement": "fire",
+              "hiddenStems": [
+                {
+                  "stem": "丁",
+                  "element": "fire",
+                  "polarity": "yin",
+                  "tenGod": "正官",
+                  "isMain": true
+                },
+                {
+                  "stem": "己",
+                  "element": "earth",
+                  "polarity": "yin",
+                  "tenGod": "正印",
+                  "isMain": false
+                }
+              ],
+              "naYin": "天河水",
+              "xun": "甲辰",
+              "voidBranches": [
+                "寅",
+                "卯"
+              ],
+              "growthStage": "沐浴"
+            },
+            "month": {
+              "stem": "甲",
+              "branch": "午",
+              "element": "wood",
+              "ganZhi": "甲午",
+              "stemPolarity": "yang",
+              "stemTenGod": "偏财",
+              "branchElement": "fire",
+              "hiddenStems": [
+                {
+                  "stem": "丁",
+                  "element": "fire",
+                  "polarity": "yin",
+                  "tenGod": "正官",
+                  "isMain": true
+                },
+                {
+                  "stem": "己",
+                  "element": "earth",
+                  "polarity": "yin",
+                  "tenGod": "正印",
+                  "isMain": false
+                }
+              ],
+              "naYin": "沙中金",
+              "xun": "甲午",
+              "voidBranches": [
+                "辰",
+                "巳"
+              ],
+              "growthStage": "沐浴"
+            },
+            "day": {
+              "stem": "庚",
+              "branch": "申",
+              "element": "metal",
+              "ganZhi": "庚申",
+              "stemPolarity": "yang",
+              "stemTenGod": "日主",
+              "branchElement": "metal",
+              "hiddenStems": [
+                {
+                  "stem": "庚",
+                  "element": "metal",
+                  "polarity": "yang",
+                  "tenGod": "比肩",
+                  "isMain": true
+                },
+                {
+                  "stem": "壬",
+                  "element": "water",
+                  "polarity": "yang",
+                  "tenGod": "食神",
+                  "isMain": false
+                },
+                {
+                  "stem": "戊",
+                  "element": "earth",
+                  "polarity": "yang",
+                  "tenGod": "偏印",
+                  "isMain": false
+                }
+              ],
+              "naYin": "石榴木",
+              "xun": "甲寅",
+              "voidBranches": [
+                "子",
+                "丑"
+              ],
+              "growthStage": "临官"
+            },
+            "hour": {
+              "stem": "壬",
+              "branch": "午",
+              "element": "water",
+              "ganZhi": "壬午",
+              "stemPolarity": "yang",
+              "stemTenGod": "食神",
+              "branchElement": "fire",
+              "hiddenStems": [
+                {
+                  "stem": "丁",
+                  "element": "fire",
+                  "polarity": "yin",
+                  "tenGod": "正官",
+                  "isMain": true
+                },
+                {
+                  "stem": "己",
+                  "element": "earth",
+                  "polarity": "yin",
+                  "tenGod": "正印",
+                  "isMain": false
+                }
+              ],
+              "naYin": "杨柳木",
+              "xun": "甲戌",
+              "voidBranches": [
+                "申",
+                "酉"
+              ],
+              "growthStage": "沐浴"
+            }
+          },
+          "dayMaster": {
+            "char": "庚",
+            "pinyin": "geng",
+            "element": "metal",
+            "polarity": "yang"
+          },
+          "daYun": {
+            "cycles": [
+              {
+                "index": 1,
+                "stem": "乙",
+                "branch": "未",
+                "ganZhi": "乙未",
+                "startYear": 2033,
+                "startAge": 7,
+                "endYear": 2042,
+                "endAge": 16,
+                "stemTenGod": "正财",
+                "branchTenGod": "正印"
+              },
+              {
+                "index": 2,
+                "stem": "丙",
+                "branch": "申",
+                "ganZhi": "丙申",
+                "startYear": 2043,
+                "startAge": 17,
+                "endYear": 2052,
+                "endAge": 26,
+                "stemTenGod": "七杀",
+                "branchTenGod": "比肩"
+              },
+              {
+                "index": 3,
+                "stem": "丁",
+                "branch": "酉",
+                "ganZhi": "丁酉",
+                "startYear": 2053,
+                "startAge": 27,
+                "endYear": 2062,
+                "endAge": 36,
+                "stemTenGod": "正官",
+                "branchTenGod": "劫财"
+              },
+              {
+                "index": 4,
+                "stem": "戊",
+                "branch": "戌",
+                "ganZhi": "戊戌",
+                "startYear": 2063,
+                "startAge": 37,
+                "endYear": 2072,
+                "endAge": 46,
+                "stemTenGod": "偏印",
+                "branchTenGod": "偏印"
+              },
+              {
+                "index": 5,
+                "stem": "己",
+                "branch": "亥",
+                "ganZhi": "己亥",
+                "startYear": 2073,
+                "startAge": 47,
+                "endYear": 2082,
+                "endAge": 56,
+                "stemTenGod": "正印",
+                "branchTenGod": "食神"
+              },
+              {
+                "index": 6,
+                "stem": "庚",
+                "branch": "子",
+                "ganZhi": "庚子",
+                "startYear": 2083,
+                "startAge": 57,
+                "endYear": 2092,
+                "endAge": 66,
+                "stemTenGod": "比肩",
+                "branchTenGod": "伤官"
+              },
+              {
+                "index": 7,
+                "stem": "辛",
+                "branch": "丑",
+                "ganZhi": "辛丑",
+                "startYear": 2093,
+                "startAge": 67,
+                "endYear": 2102,
+                "endAge": 76,
+                "stemTenGod": "劫财",
+                "branchTenGod": "正印"
+              },
+              {
+                "index": 8,
+                "stem": "壬",
+                "branch": "寅",
+                "ganZhi": "壬寅",
+                "startYear": 2103,
+                "startAge": 77,
+                "endYear": 2112,
+                "endAge": 86,
+                "stemTenGod": "食神",
+                "branchTenGod": "偏财"
+              },
+              {
+                "index": 9,
+                "stem": "癸",
+                "branch": "卯",
+                "ganZhi": "癸卯",
+                "startYear": 2113,
+                "startAge": 87,
+                "endYear": 2122,
+                "endAge": 96,
+                "stemTenGod": "伤官",
+                "branchTenGod": "正财"
+              }
+            ],
+            "isForward": true,
+            "startYear": 2033,
+            "startAge": 7,
+            "startDate": "2033-10-05 05:00:00",
+            "startOffset": {
+              "years": 7,
+              "months": 3,
+              "days": 19,
+              "hours": 17
+            },
+            "timing": {
+              "status": "CALCULATED",
+              "version": "DAYUN_SECOND_V2",
+              "intervalBasis": "CIVIL_INSTANT",
+              "conversionPolicy": "THREE_DAYS_PER_YEAR",
+              "termProvider": "lunar-javascript",
+              "termProviderVersion": "1.7.7",
+              "termTimezone": "UTC+08:00",
+              "selectionPolicy": "PREVIOUS_INCLUSIVE_NEXT_EXCLUSIVE",
+              "rounding": "WHOLE_SYMBOLIC_HOUR_FLOOR",
+              "startDateBasis": "NOMINAL_BIRTHPLACE_CIVIL",
+              "timezoneSource": "NUMERIC_OFFSET",
+              "timezoneBasis": 8,
+              "timezoneDatabase": "NOT_APPLICABLE",
+              "disambiguation": "REJECT",
+              "resolvedOffsetSeconds": 28800,
+              "birthUtc": "2026-06-15T04:00:00Z",
+              "jieName": "小暑",
+              "jieUtc": "2026-07-07T01:56:57Z",
+              "intervalSeconds": 1893417,
+              "sourceRemainderSeconds": 27
+            }
+          },
+          "interactions": [
+            {
+              "id": "PUNISHMENT:year:午|month:午",
+              "type": "PUNISHMENT",
+              "branches": [
+                "午",
+                "午"
+              ],
+              "pillars": [
+                "year",
+                "month"
+              ],
+              "transformationStatus": "NOT_APPLICABLE",
+              "description": "Self-Punishment (自刑) — 午午"
+            },
+            {
+              "id": "PUNISHMENT:year:午|hour:午",
+              "type": "PUNISHMENT",
+              "branches": [
+                "午",
+                "午"
+              ],
+              "pillars": [
+                "year",
+                "hour"
+              ],
+              "transformationStatus": "NOT_APPLICABLE",
+              "description": "Self-Punishment (自刑) — 午午"
+            },
+            {
+              "id": "PUNISHMENT:month:午|hour:午",
+              "type": "PUNISHMENT",
+              "branches": [
+                "午",
+                "午"
+              ],
+              "pillars": [
+                "month",
+                "hour"
+              ],
+              "transformationStatus": "NOT_APPLICABLE",
+              "description": "Self-Punishment (自刑) — 午午"
+            }
+          ],
+          "solarTimeInfo": {
+            "trueSolarTime": "12:05",
+            "trueSolarDateTime": "2026-06-15 12:05:39",
+            "solarDate": "2026-06-15",
+            "standardMeridian": 120,
+            "longitudeCorrectionMinutes": 6.105559999999969,
+            "equationOfTimeMinutes": -0.45190288403709233,
+            "algorithm": "meeus"
+          },
+          "calendar": {
+            "inputType": "solar",
+            "civilSolar": {
+              "year": 2026,
+              "month": 6,
+              "day": 15,
+              "hour": 12,
+              "minute": 0,
+              "second": 0
+            },
+            "calculationSolar": {
+              "year": 2026,
+              "month": 6,
+              "day": 15,
+              "hour": 12,
+              "minute": 5,
+              "second": 39
+            },
+            "lunar": {
+              "year": 2026,
+              "month": 5,
+              "day": 1,
+              "hour": 12,
+              "minute": 5,
+              "second": 39,
+              "isLeapMonth": false
+            },
+            "zodiac": "马"
+          },
+          "metadata": {
+            "trueSolarTimeApplied": true,
+            "dayBoundaryMode": "ZI_HOUR_23",
+            "longitude": 121.52639,
+            "timezoneBasis": 8,
+            "dstOffset": 0,
+            "daYunTimingVersion": "DAYUN_SECOND_V2"
+          }
+        },
+        "policy": {
+          "enableTrueSolarTime": true,
+          "dayBoundaryMode": "ZI_HOUR_23",
+          "daYunTimingVersion": "DAYUN_SECOND_V2",
+          "timezoneBasis": "Asia/Taipei"
+        }
+      },
+      "attribution": {
+        "brand": "OpenFate.ai",
+        "url": "https://openfate.ai",
+        "engine": "@openfate/bazi-engine",
+        "trueSolarTimeEngine": "@openfate/true-solar-time",
+        "languages": [
+          "English",
+          "简体中文",
+          "繁體中文",
+          "日本語"
+        ]
+      }
+    }
+  }
+}

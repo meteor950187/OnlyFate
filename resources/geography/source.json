@@ -1,0 +1,29 @@
+{
+  "retrievedDate": "2026-11-02",
+  "attribution": "GeoNames",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+  "precision": "city_representative_point",
+  "files": [
+    {
+      "file": "cities15000.zip",
+      "url": "https://download.geonames.org/export/dump/cities15000.zip",
+      "sha256": "c7b7482b115463874798824f76381f84103233c0a9db9d43efe8501719200dc9"
+    },
+    {
+      "file": "countryInfo.txt",
+      "url": "https://download.geonames.org/export/dump/countryInfo.txt",
+      "sha256": "79f8f59ea01cbb40438bf1856dd6c2ff201f03f8fc72d0530b2646aaf603ef04"
+    },
+    {
+      "file": "admin1CodesASCII.txt",
+      "url": "https://download.geonames.org/export/dump/admin1CodesASCII.txt",
+      "sha256": "2e4867f5397acb056ea26377601b57af37cb4c81399770225018e9e439e91ad3"
+    },
+    {
+      "file": "readme.txt",
+      "url": "https://download.geonames.org/export/dump/readme.txt",
+      "sha256": "b1957379b6c1242c700c98ac9a8aa0a09f56c3c0a50ee72175527005f48ef2c5"
+    }
+  ]
+}

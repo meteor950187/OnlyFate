@@ -1,0 +1,194 @@
+{
+  "version": "limited-zh-TW-v1",
+  "ruleVersion": "naming-trial-v1",
+  "characters": [
+    {
+      "character": "林",
+      "kangxiStrokes": 8,
+      "readings": [
+        "ㄌㄧㄣˊ"
+      ],
+      "meaning": "成片樹木",
+      "trialElement": "木",
+      "source": "https://zdic.net/hant/林",
+      "sourceNote": "固定姓氏；不因本次取用假設改姓",
+      "nameEligible": false
+    },
+    {
+      "character": "峻",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄐㄩㄣˋ"
+      ],
+      "meaning": "高峭的山勢",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/峻",
+      "sourceNote": "山部與高山意象；土為本次模型分類，非字典認證",
+      "nameEligible": true
+    },
+    {
+      "character": "城",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄔㄥˊ"
+      ],
+      "meaning": "城牆與守護的意象",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/城",
+      "sourceNote": "土部與城牆意象；使用康熙10，非頁首現代9",
+      "nameEligible": true
+    },
+    {
+      "character": "峰",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄈㄥ"
+      ],
+      "meaning": "山的高處",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/峰",
+      "sourceNote": "山部與山峰意象；土為本次模型分類",
+      "nameEligible": true
+    },
+    {
+      "character": "垣",
+      "kangxiStrokes": 9,
+      "readings": [
+        "ㄩㄢˊ"
+      ],
+      "meaning": "圍牆與界線",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/垣",
+      "sourceNote": "土部與牆垣意象；易讀性尚無使用者測試",
+      "nameEligible": true
+    },
+    {
+      "character": "宥",
+      "kangxiStrokes": 9,
+      "readings": [
+        "ㄧㄡˋ"
+      ],
+      "meaning": "寬厚與包容",
+      "trialElement": null,
+      "source": "https://zdic.net/hant/宥",
+      "sourceNote": "寬宥字義可核對；未採用一個可追溯的五行分類，暫不入池",
+      "nameEligible": true
+    },
+    {
+      "character": "鋒",
+      "kangxiStrokes": 15,
+      "readings": [
+        "ㄈㄥ"
+      ],
+      "meaning": "器物尖端，引申銳利",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/鋒",
+      "sourceNote": "金部及器物尖端意象；金為本次模型分類",
+      "nameEligible": true
+    },
+    {
+      "character": "銳",
+      "kangxiStrokes": 15,
+      "readings": [
+        "ㄖㄨㄟˋ"
+      ],
+      "meaning": "敏銳與精進",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/銳",
+      "sourceNote": "金部及鋒利、敏銳意象；金為本次模型分類",
+      "nameEligible": true
+    },
+    {
+      "character": "錚",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄓㄥ"
+      ],
+      "meaning": "金石相擊的清亮聲",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/錚",
+      "sourceNote": "漢典康熙欄16；教育部16交叉核對；不用漢典頁首14",
+      "nameEligible": true
+    },
+    {
+      "character": "錫",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄒㄧˊ"
+      ],
+      "meaning": "金屬錫，亦有賜予義",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/錫",
+      "sourceNote": "採臺灣國語辭典讀音；漢典頁首拼音與國語辭典欄不同",
+      "nameEligible": true
+    },
+    {
+      "character": "鈺",
+      "kangxiStrokes": 13,
+      "readings": [
+        "ㄩˋ"
+      ],
+      "meaning": "珍寶與堅金",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/鈺",
+      "sourceNote": "金部；字典有堅金、珍寶義；金為本次模型分類",
+      "nameEligible": true
+    },
+    {
+      "character": "澄",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄔㄥˊ",
+        "ㄉㄥˋ"
+      ],
+      "meaning": "水色清澈",
+      "trialElement": "水",
+      "source": "https://zdic.net/hant/澄",
+      "sourceNote": "水清澈義採ㄔㄥˊ；有其他讀音；用康熙16非現代15",
+      "nameEligible": true
+    }
+  ],
+  "avoidReadings": [
+    {
+      "character": "宏",
+      "readings": [
+        "ㄏㄨㄥˊ"
+      ],
+      "source": "https://zdic.net/hant/宏"
+    },
+    {
+      "character": "志",
+      "readings": [
+        "ㄓˋ"
+      ],
+      "source": "https://zdic.net/hant/志"
+    }
+  ],
+  "goodNumbers": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    11,
+    13,
+    15,
+    16,
+    17,
+    18,
+    21,
+    23,
+    24,
+    25,
+    29,
+    31,
+    32,
+    33,
+    35,
+    37,
+    39,
+    41
+  ],
+  "arithmeticSource": "lin-baby-naming-arithmetic.json"
+}

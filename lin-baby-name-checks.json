@@ -1,0 +1,586 @@
+{
+  "recordType": "research manual source extraction plus computed arithmetic and explicit model decisions",
+  "reviewDate": "2026-10-23",
+  "status": "conditional demonstration, not validated commercial naming recommendation",
+  "characters": [
+    {
+      "character": "林",
+      "kangxiStrokes": 8,
+      "zhuyin": "ㄌㄧㄣˊ",
+      "tone": 2,
+      "modelElement": "木",
+      "note": "固定姓氏；不因本次取用假設改姓",
+      "source": "https://zdic.net/hant/林"
+    },
+    {
+      "character": "峻",
+      "kangxiStrokes": 10,
+      "zhuyin": "ㄐㄩㄣˋ",
+      "tone": 4,
+      "modelElement": "土",
+      "note": "山部與高山意象；土為本次模型分類，非字典認證",
+      "source": "https://zdic.net/hant/峻"
+    },
+    {
+      "character": "城",
+      "kangxiStrokes": 10,
+      "zhuyin": "ㄔㄥˊ",
+      "tone": 2,
+      "modelElement": "土",
+      "note": "土部與城牆意象；使用康熙10，非頁首現代9",
+      "source": "https://zdic.net/hant/城"
+    },
+    {
+      "character": "峰",
+      "kangxiStrokes": 10,
+      "zhuyin": "ㄈㄥ",
+      "tone": 1,
+      "modelElement": "土",
+      "note": "山部與山峰意象；土為本次模型分類",
+      "source": "https://zdic.net/hant/峰"
+    },
+    {
+      "character": "垣",
+      "kangxiStrokes": 9,
+      "zhuyin": "ㄩㄢˊ",
+      "tone": 2,
+      "modelElement": "土",
+      "note": "土部與牆垣意象；易讀性尚無使用者測試",
+      "source": "https://zdic.net/hant/垣"
+    },
+    {
+      "character": "宥",
+      "kangxiStrokes": 9,
+      "zhuyin": "ㄧㄡˋ",
+      "tone": 4,
+      "modelElement": null,
+      "note": "寬宥字義可核對；未採用一個可追溯的五行分類，暫不入池",
+      "source": "https://zdic.net/hant/宥"
+    },
+    {
+      "character": "鋒",
+      "kangxiStrokes": 15,
+      "zhuyin": "ㄈㄥ",
+      "tone": 1,
+      "modelElement": "金",
+      "note": "金部及器物尖端意象；金為本次模型分類",
+      "source": "https://zdic.net/hant/鋒"
+    },
+    {
+      "character": "銳",
+      "kangxiStrokes": 15,
+      "zhuyin": "ㄖㄨㄟˋ",
+      "tone": 4,
+      "modelElement": "金",
+      "note": "金部及鋒利、敏銳意象；金為本次模型分類",
+      "source": "https://zdic.net/hant/銳"
+    },
+    {
+      "character": "錚",
+      "kangxiStrokes": 16,
+      "zhuyin": "ㄓㄥ",
+      "tone": 1,
+      "modelElement": "金",
+      "note": "漢典康熙欄16；教育部16交叉核對；不用漢典頁首14",
+      "source": "https://zdic.net/hant/錚"
+    },
+    {
+      "character": "錫",
+      "kangxiStrokes": 16,
+      "zhuyin": "ㄒㄧˊ",
+      "tone": 2,
+      "modelElement": "金",
+      "note": "採臺灣國語辭典讀音；漢典頁首拼音與國語辭典欄不同",
+      "source": "https://zdic.net/hant/錫"
+    },
+    {
+      "character": "鈺",
+      "kangxiStrokes": 13,
+      "zhuyin": "ㄩˋ",
+      "tone": 4,
+      "modelElement": "金",
+      "note": "金部；字典有堅金、珍寶義；金為本次模型分類",
+      "source": "https://zdic.net/hant/鈺"
+    },
+    {
+      "character": "澄",
+      "kangxiStrokes": 16,
+      "zhuyin": "ㄔㄥˊ",
+      "tone": 2,
+      "modelElement": "水",
+      "note": "水清澈義採ㄔㄥˊ；有其他讀音；用康熙16非現代15",
+      "source": "https://zdic.net/hant/澄"
+    }
+  ],
+  "characterElementPolicy": "本次依部首及字義作單一分類；不是OpenFate輸出或所有姓名學共識。宥未分類。",
+  "excludedBeforeDictionaryCheck": [
+    {
+      "character": "宏",
+      "reason": "案例忌用字；未為排除而另查筆畫"
+    },
+    {
+      "character": "志",
+      "reason": "案例忌用字；未為排除而另查筆畫"
+    }
+  ],
+  "scope": "H1只枚舉此處5個名首字乘4個名末字=20姓名；H2只驗算1名。不代表已搜尋完整字庫。",
+  "counts": {
+    "h1Enumerated": 20,
+    "h1BasicPass": 7,
+    "h1SampleNames": 4,
+    "h2Examples": 1
+  },
+  "rows": [
+    {
+      "branch": "H1_土金",
+      "name": "林峻鋒",
+      "middleStrokes": 10,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 25,
+        "外": 16,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "納入H1條件式樣張"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林峻銳",
+      "middleStrokes": 10,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 25,
+        "外": 16,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "納入H1條件式樣張"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林峻錚",
+      "middleStrokes": 10,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林峻錫",
+      "middleStrokes": 10,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林城鋒",
+      "middleStrokes": 10,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 25,
+        "外": 16,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "納入H1條件式樣張"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林城銳",
+      "middleStrokes": 10,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 25,
+        "外": 16,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "納入H1條件式樣張"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林城錚",
+      "middleStrokes": 10,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林城錫",
+      "middleStrokes": 10,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林峰鋒",
+      "middleStrokes": 10,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 25,
+        "外": 16,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "國語名兩字同音峰鋒；本次編輯規則排除"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林峰銳",
+      "middleStrokes": 10,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 25,
+        "外": 16,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "條件可用但不入樣張：控制字池，避免峰鋒禁配例外"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林峰錚",
+      "middleStrokes": 10,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林峰錫",
+      "middleStrokes": 10,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林垣鋒",
+      "middleStrokes": 9,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 24,
+        "外": 16,
+        "總": 32
+      },
+      "three": "水金火",
+      "basicPass": false,
+      "reasons": [
+        "人地相剋"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林垣銳",
+      "middleStrokes": 9,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 24,
+        "外": 16,
+        "總": 32
+      },
+      "three": "水金火",
+      "basicPass": false,
+      "reasons": [
+        "人地相剋"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林垣錚",
+      "middleStrokes": 9,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 25,
+        "外": 17,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "保留研究：易讀與語意連結較弱是模型判斷，尚未驗證"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林垣錫",
+      "middleStrokes": 9,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 25,
+        "外": 17,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "保留研究：易讀與語意連結較弱是模型判斷，尚未驗證"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林宥鋒",
+      "middleStrokes": 9,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 24,
+        "外": 16,
+        "總": 32
+      },
+      "three": "水金火",
+      "basicPass": false,
+      "reasons": [
+        "H1所需字五行未成立或未分類",
+        "人地相剋"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林宥銳",
+      "middleStrokes": 9,
+      "lastStrokes": 15,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 24,
+        "外": 16,
+        "總": 32
+      },
+      "three": "水金火",
+      "basicPass": false,
+      "reasons": [
+        "H1所需字五行未成立或未分類",
+        "人地相剋"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林宥錚",
+      "middleStrokes": 9,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 25,
+        "外": 17,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "H1所需字五行未成立或未分類"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H1_土金",
+      "name": "林宥錫",
+      "middleStrokes": 9,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 25,
+        "外": 17,
+        "總": 33
+      },
+      "three": "水金土",
+      "basicPass": false,
+      "reasons": [
+        "H1所需字五行未成立或未分類"
+      ],
+      "decision": "排除"
+    },
+    {
+      "branch": "H2_金水",
+      "name": "林鈺澄",
+      "middleStrokes": 13,
+      "lastStrokes": 16,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 29,
+        "外": 17,
+        "總": 37
+      },
+      "three": "水木水",
+      "basicPass": true,
+      "reasons": [],
+      "decision": "替代假設的單一示例；不與H1一起當成家長選項，取用未定"
+    }
+  ],
+  "swapChecks": [
+    {
+      "name": "林鋒峻",
+      "middle": 15,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 25,
+        "外": 11,
+        "總": 33
+      },
+      "three": "水火土",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "name": "林峻錚",
+      "middle": 10,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "name": "林垣鋒",
+      "middle": 9,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 24,
+        "外": 16,
+        "總": 32
+      },
+      "three": "水金火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    }
+  ]
+}

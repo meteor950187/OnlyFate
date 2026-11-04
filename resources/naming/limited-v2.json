@@ -1,0 +1,557 @@
+﻿{
+  "version": "curated-zh-TW-v2",
+  "ruleVersion": "naming-pools-trial-v2",
+  "characters": [
+    {
+      "character": "林",
+      "kangxiStrokes": 8,
+      "readings": [
+        "ㄌㄧㄣˊ"
+      ],
+      "meaning": "叢生在一處的樹木或竹子",
+      "trialElement": "木",
+      "source": "https://zdic.net/hant/林",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": false,
+      "profile": {
+        "literalMeaning": "叢生在一處的樹木或竹子",
+        "namingWish": "生長茂盛、彼此扶持",
+        "style": "自然",
+        "caution": "僅作本案例固定姓氏。",
+        "meaningSource": "https://zdic.net/hant/林#國語辭典",
+        "readingSource": "https://zdic.net/hant/林#國語辭典",
+        "strokeSource": "https://zdic.net/hant/林#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/林.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之木分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "峻",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄐㄩㄣˋ"
+      ],
+      "meaning": "高而陡峭",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/峻",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "高而陡峭",
+        "namingWish": "自我期許高、做事認真",
+        "style": "挺拔",
+        "caution": "也有嚴厲義；五行與舊版不同。",
+        "meaningSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=12227",
+        "readingSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=12227",
+        "strokeSource": "https://zdic.net/hant/峻#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/峻.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。本版取代v1由山部推定土的內部分類。"
+      }
+    },
+    {
+      "character": "城",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄔㄥˊ"
+      ],
+      "meaning": "用以防守的圍牆，也指都市",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/城",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "用以防守的圍牆，也指都市",
+        "namingWish": "安定可靠、珍惜家人",
+        "style": "穩重",
+        "caution": "康熙10畫，現代字形常計9畫。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8515",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8515",
+        "strokeSource": "https://zdic.net/hant/城#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/城.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "峰",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄈㄥ"
+      ],
+      "meaning": "高而尖的山頭",
+      "trialElement": "水",
+      "source": "https://zdic.net/hant/峰",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "高而尖的山頭",
+        "namingWish": "勇於向上、持續努力",
+        "style": "挺拔",
+        "caution": "五行與舊版不同，不進土金示例池。",
+        "meaningSource": "https://zdic.net/hant/峰#國語辭典",
+        "readingSource": "https://zdic.net/hant/峰#國語辭典",
+        "strokeSource": "https://zdic.net/hant/峰#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/峰.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之水分類；屬未驗證命名政策，不是字典本義或科學結論。本版取代v1由山部推定土的內部分類。"
+      }
+    },
+    {
+      "character": "垣",
+      "kangxiStrokes": 9,
+      "readings": [
+        "ㄩㄢˊ"
+      ],
+      "meaning": "矮牆，也泛指圍牆",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/垣",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "矮牆，也泛指圍牆",
+        "namingWish": "有原則，也能守護他人",
+        "style": "沉穩",
+        "caution": "較少見，可能需要說明讀音。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11801",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11801",
+        "strokeSource": "https://zdic.net/hant/垣#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/垣.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "宥",
+      "kangxiStrokes": 9,
+      "readings": [
+        "ㄧㄡˋ"
+      ],
+      "meaning": "寬待、寬恕",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/宥",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "寬待、寬恕",
+        "namingWish": "待人寬厚、願意理解他人",
+        "style": "溫厚",
+        "caution": "與祐同音，介紹名字時可說寬宥的宥。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10948",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10948",
+        "strokeSource": "https://zdic.net/hant/宥#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/宥.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "鋒",
+      "kangxiStrokes": 15,
+      "readings": [
+        "ㄈㄥ"
+      ],
+      "meaning": "兵器銳利的部分或器物尖端",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/鋒",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "兵器銳利的部分或器物尖端",
+        "namingWish": "積極進取、掌握方向",
+        "style": "俐落",
+        "caution": "帶有刀劍意象。",
+        "meaningSource": "https://zdic.net/hant/鋒#國語辭典",
+        "readingSource": "https://zdic.net/hant/鋒#國語辭典",
+        "strokeSource": "https://zdic.net/hant/鋒#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/锋.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。該頁明列對應繁體字，僅借用其分類，不借用大陸讀音或簡體筆畫。"
+      }
+    },
+    {
+      "character": "銳",
+      "kangxiStrokes": 15,
+      "readings": [
+        "ㄖㄨㄟˋ"
+      ],
+      "meaning": "鋒利，也指感覺靈敏",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/銳",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "鋒利，也指感覺靈敏",
+        "namingWish": "觀察敏銳、做事果決",
+        "style": "俐落",
+        "caution": "銳利意象較強。",
+        "meaningSource": "https://zdic.net/hant/銳#國語辭典",
+        "readingSource": "https://zdic.net/hant/銳#國語辭典",
+        "strokeSource": "https://zdic.net/hant/銳#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/锐.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。該頁明列對應繁體字，僅借用其分類，不借用大陸讀音或簡體筆畫。"
+      }
+    },
+    {
+      "character": "錚",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄓㄥ"
+      ],
+      "meaning": "金屬、玉石相撞的聲音",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/錚",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "金屬、玉石相撞的聲音",
+        "namingWish": "做人坦蕩、有堅持",
+        "style": "清朗",
+        "caution": "筆畫較多，書寫時留意金字旁。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=7938",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=7938",
+        "strokeSource": "https://zdic.net/hant/錚#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/錚.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "錫",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄒㄧˊ"
+      ],
+      "meaning": "金屬元素，也有賜給之義",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/錫",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "金屬元素，也有賜給之義",
+        "namingWish": "珍惜所受的善意，樂於給予",
+        "style": "典雅",
+        "caution": "臺灣讀ㄒㄧˊ；不同地區讀音不同。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6836",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6836",
+        "strokeSource": "https://zdic.net/hant/錫#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/锡.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。該頁明列對應繁體字，僅借用其分類，不借用大陸讀音或簡體筆畫。"
+      }
+    },
+    {
+      "character": "鈺",
+      "kangxiStrokes": 13,
+      "readings": [
+        "ㄩˋ"
+      ],
+      "meaning": "堅硬的金屬，也指珍寶",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/鈺",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "堅硬的金屬，也指珍寶",
+        "namingWish": "珍惜自身價值、踏實堅定",
+        "style": "珍重",
+        "caution": "讀音與玉相同，介紹時可說金字旁的鈺。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11671",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11671",
+        "strokeSource": "https://zdic.net/hant/鈺#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/鈺.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "澄",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄔㄥˊ",
+        "ㄉㄥˋ"
+      ],
+      "meaning": "水靜而清，也指使液體沉澱",
+      "trialElement": "水",
+      "source": "https://zdic.net/hant/澄",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "水靜而清，也指使液體沉澱",
+        "namingWish": "心思清明、處事明白",
+        "style": "清澈",
+        "caution": "多音字；清澈義讀ㄔㄥˊ。",
+        "meaningSource": "https://zdic.net/hant/澄#國語辭典",
+        "readingSource": "https://zdic.net/hant/澄#國語辭典",
+        "strokeSource": "https://zdic.net/hant/澄#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/澄.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之水分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "禹",
+      "kangxiStrokes": 9,
+      "readings": [
+        "ㄩˇ"
+      ],
+      "meaning": "傳說中的蟲名，也是夏代君主名",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/禹",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "傳說中的蟲名，也是夏代君主名",
+        "namingWish": "有耐心、有承擔，願意解決問題",
+        "style": "古雅",
+        "caution": "祝願取大禹治水聯想，不把治水當字面義。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11652",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11652",
+        "strokeSource": "https://zdic.net/hant/禹#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/禹.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "威",
+      "kangxiStrokes": 9,
+      "readings": [
+        "ㄨㄟ"
+      ],
+      "meaning": "使人敬畏的氣勢或力量",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/威",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "使人敬畏的氣勢或力量",
+        "namingWish": "有自信，也懂得尊重他人",
+        "style": "有力",
+        "caution": "也用於威嚇等詞，氣質較強。",
+        "meaningSource": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=43290",
+        "readingSource": "https://dict.concised.moe.edu.tw/dictView.jsp?ID=43290",
+        "strokeSource": "https://zdic.net/hant/威#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/威.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "錦",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄐㄧㄣˇ"
+      ],
+      "meaning": "帶彩色花紋的絲織品",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/錦",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "帶彩色花紋的絲織品",
+        "namingWish": "生活豐富美好、珍惜才華",
+        "style": "華美",
+        "caution": "筆畫較多，須留意書寫習慣。",
+        "meaningSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=47374",
+        "readingSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=47374",
+        "strokeSource": "https://www.kangxizidian.com.cn/hanzi/锦.html",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/锦.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。該頁明列對應繁體字，僅借用其分類，不借用大陸讀音或簡體筆畫。"
+      }
+    },
+    {
+      "character": "錕",
+      "kangxiStrokes": 16,
+      "readings": [
+        "ㄎㄨㄣ"
+      ],
+      "meaning": "用於錕鋙，指古代寶刀寶劍",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/錕",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "用於錕鋙，指古代寶刀寶劍",
+        "namingWish": "堅毅踏實、珍惜自身才能",
+        "style": "古雅",
+        "caution": "少見字，有刀劍意象，可能需說明讀音。",
+        "meaningSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=73967",
+        "readingSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=73967",
+        "strokeSource": "https://zdic.net/hant/錕#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/錕.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "恩",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄣ"
+      ],
+      "meaning": "給予或受到的幫助、情愛",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/恩",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "給予或受到的幫助、情愛",
+        "namingWish": "懂得感恩、願意關懷他人",
+        "style": "溫暖",
+        "caution": "可能帶宗教聯想，應尊重家庭偏好。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10468",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10468",
+        "strokeSource": "https://zdic.net/hant/恩#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/恩.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "容",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄖㄨㄥˊ"
+      ],
+      "meaning": "含納、收留，也指相貌",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/容",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "含納、收留，也指相貌",
+        "namingWish": "寬厚待人、從容自持",
+        "style": "溫和",
+        "caution": "字義多，這裡取包容聯想。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=9374",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=9374",
+        "strokeSource": "https://zdic.net/hant/容#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/容.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "新",
+      "kangxiStrokes": 13,
+      "readings": [
+        "ㄒㄧㄣ"
+      ],
+      "meaning": "初次出現、未用過，古義有取木",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/新",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "初次出現、未用過，古義有取木",
+        "namingWish": "樂於學習、持續更新自己",
+        "style": "清新",
+        "caution": "不是直接指財運或人生必然重新開始。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=7179",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=7179",
+        "strokeSource": "https://zdic.net/hant/新#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/新.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "鉉",
+      "kangxiStrokes": 13,
+      "readings": [
+        "ㄒㄩㄢˋ"
+      ],
+      "meaning": "橫貫鼎耳、用來扛鼎的工具",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/鉉",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "橫貫鼎耳、用來扛鼎的工具",
+        "namingWish": "願意承擔、與人合作",
+        "style": "古雅",
+        "caution": "少見字；不是琴弦的弦。",
+        "meaningSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=73720",
+        "readingSource": "https://dict.variants.moe.edu.tw/dictView.jsp?ID=73720",
+        "strokeSource": "https://zdic.net/hant/鉉#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/鉉.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    },
+    {
+      "character": "鈴",
+      "kangxiStrokes": 13,
+      "readings": [
+        "ㄌㄧㄥˊ"
+      ],
+      "meaning": "搖動可發聲的金屬中空器具",
+      "trialElement": "金",
+      "source": "https://zdic.net/hant/鈴",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "搖動可發聲的金屬中空器具",
+        "namingWish": "清朗有朝氣、樂於表達",
+        "style": "輕快",
+        "caution": "與林並非同音，但部分口音可能近似。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=3709",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=3709",
+        "strokeSource": "https://zdic.net/hant/鈴#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/铃.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之金分類；屬未驗證命名政策，不是字典本義或科學結論。該頁明列對應繁體字，僅借用其分類，不借用大陸讀音或簡體筆畫。"
+      }
+    },
+    {
+      "character": "益",
+      "kangxiStrokes": 10,
+      "readings": [
+        "ㄧˋ",
+        "ㄧˊ"
+      ],
+      "meaning": "水漫出、增加，也指好處",
+      "trialElement": "土",
+      "source": "https://zdic.net/hant/益",
+      "sourceNote": "2026-11-03逐項查核；筆畫用康熙轉錄欄，臺灣讀音另核；詳sources-v2.md。",
+      "nameEligible": true,
+      "profile": {
+        "literalMeaning": "水漫出、增加，也指好處",
+        "namingWish": "持續成長、樂於助人",
+        "style": "積極",
+        "caution": "通常讀ㄧˋ；另有ㄧˊ的讀法，可先確認家人慣用的讀音。",
+        "meaningSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10652",
+        "readingSource": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10652",
+        "strokeSource": "https://zdic.net/hant/益#康熙字典",
+        "elementSource": "https://www.kangxizidian.com.cn/hanzi/益.html",
+        "elementRationale": "採該站「民俗參考／五行屬性」之土分類；屬未驗證命名政策，不是字典本義或科學結論。"
+      }
+    }
+  ],
+  "avoidReadings": [
+    {
+      "character": "宏",
+      "readings": [
+        "ㄏㄨㄥˊ"
+      ],
+      "source": "https://zdic.net/hant/宏"
+    },
+    {
+      "character": "志",
+      "readings": [
+        "ㄓˋ"
+      ],
+      "source": "https://zdic.net/hant/志"
+    }
+  ],
+  "goodNumbers": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    11,
+    13,
+    15,
+    16,
+    17,
+    18,
+    21,
+    23,
+    24,
+    25,
+    29,
+    31,
+    32,
+    33,
+    35,
+    37,
+    39,
+    41
+  ],
+  "arithmeticSource": "lin-baby-naming-arithmetic.json"
+}

@@ -1,0 +1,4567 @@
+{
+  "recordType": "research arithmetic; conditions selected by model, not OpenFate naming rules",
+  "range": {
+    "middle": [
+      4,
+      18
+    ],
+    "last": [
+      4,
+      18
+    ]
+  },
+  "goodNumbers": [
+    1,
+    3,
+    5,
+    6,
+    7,
+    8,
+    11,
+    13,
+    15,
+    16,
+    17,
+    18,
+    21,
+    23,
+    24,
+    25,
+    29,
+    31,
+    32,
+    33,
+    35,
+    37,
+    39,
+    41
+  ],
+  "source": "https://d0works.com/stroksIntro.php",
+  "policy": {
+    "requireGood": [
+      "人",
+      "地",
+      "外",
+      "總"
+    ],
+    "excludeFixedHeavenFromGoodCheck": true,
+    "requireNoAdjacentElementControl": true
+  },
+  "counts": {
+    "enumerated": 225,
+    "numericalPass": 43,
+    "finalPass": 9
+  },
+  "rows": [
+    {
+      "middle": 4,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 8,
+        "外": 5,
+        "總": 16
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 9,
+        "外": 6,
+        "總": 17
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 10,
+        "外": 7,
+        "總": 18
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 11,
+        "外": 8,
+        "總": 19
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 12,
+        "外": 9,
+        "總": 20
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 13,
+        "外": 10,
+        "總": 21
+      },
+      "three": "水木火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 14,
+        "外": 11,
+        "總": 22
+      },
+      "three": "水木火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 15,
+        "外": 12,
+        "總": 23
+      },
+      "three": "水木土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 16,
+        "外": 13,
+        "總": 24
+      },
+      "three": "水木土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 17,
+        "外": 14,
+        "總": 25
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 18,
+        "外": 15,
+        "總": 26
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 19,
+        "外": 16,
+        "總": 27
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 20,
+        "外": 17,
+        "總": 28
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 21,
+        "外": 18,
+        "總": 29
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 4,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 12,
+        "地": 22,
+        "外": 19,
+        "總": 30
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 9,
+        "外": 5,
+        "總": 17
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 10,
+        "外": 6,
+        "總": 18
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 11,
+        "外": 7,
+        "總": 19
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 12,
+        "外": 8,
+        "總": 20
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 13,
+        "外": 9,
+        "總": 21
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 14,
+        "外": 10,
+        "總": 22
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 15,
+        "外": 11,
+        "總": 23
+      },
+      "three": "水火土",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 16,
+        "外": 12,
+        "總": 24
+      },
+      "three": "水火土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 17,
+        "外": 13,
+        "總": 25
+      },
+      "three": "水火金",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 18,
+        "外": 14,
+        "總": 26
+      },
+      "three": "水火金",
+      "numericalRejects": [
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 19,
+        "外": 15,
+        "總": 27
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 20,
+        "外": 16,
+        "總": 28
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 21,
+        "外": 17,
+        "總": 29
+      },
+      "three": "水火木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 22,
+        "外": 18,
+        "總": 30
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 5,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 13,
+        "地": 23,
+        "外": 19,
+        "總": 31
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 10,
+        "外": 5,
+        "總": 18
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 11,
+        "外": 6,
+        "總": 19
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 12,
+        "外": 7,
+        "總": 20
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 13,
+        "外": 8,
+        "總": 21
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 14,
+        "外": 9,
+        "總": 22
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 15,
+        "外": 10,
+        "總": 23
+      },
+      "three": "水火土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 16,
+        "外": 11,
+        "總": 24
+      },
+      "three": "水火土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 17,
+        "外": 12,
+        "總": 25
+      },
+      "three": "水火金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 18,
+        "外": 13,
+        "總": 26
+      },
+      "three": "水火金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 19,
+        "外": 14,
+        "總": 27
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 20,
+        "外": 15,
+        "總": 28
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 21,
+        "外": 16,
+        "總": 29
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 22,
+        "外": 17,
+        "總": 30
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 23,
+        "外": 18,
+        "總": 31
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 6,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 14,
+        "地": 24,
+        "外": 19,
+        "總": 32
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 11,
+        "外": 5,
+        "總": 19
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 12,
+        "外": 6,
+        "總": 20
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 13,
+        "外": 7,
+        "總": 21
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 14,
+        "外": 8,
+        "總": 22
+      },
+      "three": "水土火",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 15,
+        "外": 9,
+        "總": 23
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 16,
+        "外": 10,
+        "總": 24
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 17,
+        "外": 11,
+        "總": 25
+      },
+      "three": "水土金",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 18,
+        "外": 12,
+        "總": 26
+      },
+      "three": "水土金",
+      "numericalRejects": [
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 19,
+        "外": 13,
+        "總": 27
+      },
+      "three": "水土水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 20,
+        "外": 14,
+        "總": 28
+      },
+      "three": "水土水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 21,
+        "外": 15,
+        "總": 29
+      },
+      "three": "水土木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 22,
+        "外": 16,
+        "總": 30
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 23,
+        "外": 17,
+        "總": 31
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 24,
+        "外": 18,
+        "總": 32
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 7,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 15,
+        "地": 25,
+        "外": 19,
+        "總": 33
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 12,
+        "外": 5,
+        "總": 20
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 13,
+        "外": 6,
+        "總": 21
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 14,
+        "外": 7,
+        "總": 22
+      },
+      "three": "水土火",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 15,
+        "外": 8,
+        "總": 23
+      },
+      "three": "水土土",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 16,
+        "外": 9,
+        "總": 24
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 17,
+        "外": 10,
+        "總": 25
+      },
+      "three": "水土金",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 18,
+        "外": 11,
+        "總": 26
+      },
+      "three": "水土金",
+      "numericalRejects": [
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 19,
+        "外": 12,
+        "總": 27
+      },
+      "three": "水土水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 20,
+        "外": 13,
+        "總": 28
+      },
+      "three": "水土水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 21,
+        "外": 14,
+        "總": 29
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 22,
+        "外": 15,
+        "總": 30
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 23,
+        "外": 16,
+        "總": 31
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 24,
+        "外": 17,
+        "總": 32
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 25,
+        "外": 18,
+        "總": 33
+      },
+      "three": "水土土",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 8,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 16,
+        "地": 26,
+        "外": 19,
+        "總": 34
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 13,
+        "外": 5,
+        "總": 21
+      },
+      "three": "水金火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 14,
+        "外": 6,
+        "總": 22
+      },
+      "three": "水金火",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 15,
+        "外": 7,
+        "總": 23
+      },
+      "three": "水金土",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 9,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 16,
+        "外": 8,
+        "總": 24
+      },
+      "three": "水金土",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 9,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 17,
+        "外": 9,
+        "總": 25
+      },
+      "three": "水金金",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 18,
+        "外": 10,
+        "總": 26
+      },
+      "three": "水金金",
+      "numericalRejects": [
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 19,
+        "外": 11,
+        "總": 27
+      },
+      "three": "水金水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 20,
+        "外": 12,
+        "總": 28
+      },
+      "three": "水金水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 21,
+        "外": 13,
+        "總": 29
+      },
+      "three": "水金木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 22,
+        "外": 14,
+        "總": 30
+      },
+      "three": "水金木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 23,
+        "外": 15,
+        "總": 31
+      },
+      "three": "水金火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 24,
+        "外": 16,
+        "總": 32
+      },
+      "three": "水金火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 25,
+        "外": 17,
+        "總": 33
+      },
+      "three": "水金土",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 9,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 26,
+        "外": 18,
+        "總": 34
+      },
+      "three": "水金土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 9,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 17,
+        "地": 27,
+        "外": 19,
+        "總": 35
+      },
+      "three": "水金金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 14,
+        "外": 5,
+        "總": 22
+      },
+      "three": "水金火",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 15,
+        "外": 6,
+        "總": 23
+      },
+      "three": "水金土",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 10,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 16,
+        "外": 7,
+        "總": 24
+      },
+      "three": "水金土",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 10,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 17,
+        "外": 8,
+        "總": 25
+      },
+      "three": "水金金",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 10,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 18,
+        "外": 9,
+        "總": 26
+      },
+      "three": "水金金",
+      "numericalRejects": [
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 19,
+        "外": 10,
+        "總": 27
+      },
+      "three": "水金水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 20,
+        "外": 11,
+        "總": 28
+      },
+      "three": "水金水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 21,
+        "外": 12,
+        "總": 29
+      },
+      "three": "水金木",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 22,
+        "外": 13,
+        "總": 30
+      },
+      "three": "水金木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 23,
+        "外": 14,
+        "總": 31
+      },
+      "three": "水金火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 24,
+        "外": 15,
+        "總": 32
+      },
+      "three": "水金火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 25,
+        "外": 16,
+        "總": 33
+      },
+      "three": "水金土",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 10,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 26,
+        "外": 17,
+        "總": 34
+      },
+      "three": "水金土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 27,
+        "外": 18,
+        "總": 35
+      },
+      "three": "水金金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 10,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 18,
+        "地": 28,
+        "外": 19,
+        "總": 36
+      },
+      "three": "水金金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 15,
+        "外": 5,
+        "總": 23
+      },
+      "three": "水水土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 16,
+        "外": 6,
+        "總": 24
+      },
+      "three": "水水土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 17,
+        "外": 7,
+        "總": 25
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 18,
+        "外": 8,
+        "總": 26
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 19,
+        "外": 9,
+        "總": 27
+      },
+      "three": "水水水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 20,
+        "外": 10,
+        "總": 28
+      },
+      "three": "水水水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 21,
+        "外": 11,
+        "總": 29
+      },
+      "three": "水水木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 22,
+        "外": 12,
+        "總": 30
+      },
+      "three": "水水木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 23,
+        "外": 13,
+        "總": 31
+      },
+      "three": "水水火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 24,
+        "外": 14,
+        "總": 32
+      },
+      "three": "水水火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 25,
+        "外": 15,
+        "總": 33
+      },
+      "three": "水水土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 26,
+        "外": 16,
+        "總": 34
+      },
+      "three": "水水土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 27,
+        "外": 17,
+        "總": 35
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 28,
+        "外": 18,
+        "總": 36
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 11,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 19,
+        "地": 29,
+        "外": 19,
+        "總": 37
+      },
+      "three": "水水水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 16,
+        "外": 5,
+        "總": 24
+      },
+      "three": "水水土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 17,
+        "外": 6,
+        "總": 25
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 18,
+        "外": 7,
+        "總": 26
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 19,
+        "外": 8,
+        "總": 27
+      },
+      "three": "水水水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 20,
+        "外": 9,
+        "總": 28
+      },
+      "three": "水水水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 21,
+        "外": 10,
+        "總": 29
+      },
+      "three": "水水木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 22,
+        "外": 11,
+        "總": 30
+      },
+      "three": "水水木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 23,
+        "外": 12,
+        "總": 31
+      },
+      "three": "水水火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 24,
+        "外": 13,
+        "總": 32
+      },
+      "three": "水水火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 25,
+        "外": 14,
+        "總": 33
+      },
+      "three": "水水土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 26,
+        "外": 15,
+        "總": 34
+      },
+      "three": "水水土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 27,
+        "外": 16,
+        "總": 35
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 28,
+        "外": 17,
+        "總": 36
+      },
+      "three": "水水金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 29,
+        "外": 18,
+        "總": 37
+      },
+      "three": "水水水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 12,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 20,
+        "地": 30,
+        "外": 19,
+        "總": 38
+      },
+      "three": "水水水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 17,
+        "外": 5,
+        "總": 25
+      },
+      "three": "水木金",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 18,
+        "外": 6,
+        "總": 26
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 19,
+        "外": 7,
+        "總": 27
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 20,
+        "外": 8,
+        "總": 28
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 21,
+        "外": 9,
+        "總": 29
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 22,
+        "外": 10,
+        "總": 30
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 23,
+        "外": 11,
+        "總": 31
+      },
+      "three": "水木火",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 13,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 24,
+        "外": 12,
+        "總": 32
+      },
+      "three": "水木火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 25,
+        "外": 13,
+        "總": 33
+      },
+      "three": "水木土",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 26,
+        "外": 14,
+        "總": 34
+      },
+      "three": "水木土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 27,
+        "外": 15,
+        "總": 35
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 28,
+        "外": 16,
+        "總": 36
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 29,
+        "外": 17,
+        "總": 37
+      },
+      "three": "水木水",
+      "numericalRejects": [],
+      "relationalRejects": [],
+      "numericalPass": true,
+      "pass": true
+    },
+    {
+      "middle": 13,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 30,
+        "外": 18,
+        "總": 38
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 13,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 21,
+        "地": 31,
+        "外": 19,
+        "總": 39
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 18,
+        "外": 5,
+        "總": 26
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 19,
+        "外": 6,
+        "總": 27
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 20,
+        "外": 7,
+        "總": 28
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 21,
+        "外": 8,
+        "總": 29
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 22,
+        "外": 9,
+        "總": 30
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 23,
+        "外": 10,
+        "總": 31
+      },
+      "three": "水木火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 24,
+        "外": 11,
+        "總": 32
+      },
+      "three": "水木火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 25,
+        "外": 12,
+        "總": 33
+      },
+      "three": "水木土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 26,
+        "外": 13,
+        "總": 34
+      },
+      "three": "水木土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 27,
+        "外": 14,
+        "總": 35
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 28,
+        "外": 15,
+        "總": 36
+      },
+      "three": "水木金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 29,
+        "外": 16,
+        "總": 37
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 30,
+        "外": 17,
+        "總": 38
+      },
+      "three": "水木水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 31,
+        "外": 18,
+        "總": 39
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 14,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 22,
+        "地": 32,
+        "外": 19,
+        "總": 40
+      },
+      "three": "水木木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 19,
+        "外": 5,
+        "總": 27
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 20,
+        "外": 6,
+        "總": 28
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 21,
+        "外": 7,
+        "總": 29
+      },
+      "three": "水火木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 22,
+        "外": 8,
+        "總": 30
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 23,
+        "外": 9,
+        "總": 31
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 24,
+        "外": 10,
+        "總": 32
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 25,
+        "外": 11,
+        "總": 33
+      },
+      "three": "水火土",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 26,
+        "外": 12,
+        "總": 34
+      },
+      "three": "水火土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 27,
+        "外": 13,
+        "總": 35
+      },
+      "three": "水火金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 28,
+        "外": 14,
+        "總": 36
+      },
+      "three": "水火金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 29,
+        "外": 15,
+        "總": 37
+      },
+      "three": "水火水",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 30,
+        "外": 16,
+        "總": 38
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 31,
+        "外": 17,
+        "總": 39
+      },
+      "three": "水火木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 32,
+        "外": 18,
+        "總": 40
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 15,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 23,
+        "地": 33,
+        "外": 19,
+        "總": 41
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 20,
+        "外": 5,
+        "總": 28
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 21,
+        "外": 6,
+        "總": 29
+      },
+      "three": "水火木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 22,
+        "外": 7,
+        "總": 30
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 23,
+        "外": 8,
+        "總": 31
+      },
+      "three": "水火火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 24,
+        "外": 9,
+        "總": 32
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 25,
+        "外": 10,
+        "總": 33
+      },
+      "three": "水火土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 26,
+        "外": 11,
+        "總": 34
+      },
+      "three": "水火土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 27,
+        "外": 12,
+        "總": 35
+      },
+      "three": "水火金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 28,
+        "外": 13,
+        "總": 36
+      },
+      "three": "水火金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 29,
+        "外": 14,
+        "總": 37
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 30,
+        "外": 15,
+        "總": 38
+      },
+      "three": "水火水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 31,
+        "外": 16,
+        "總": 39
+      },
+      "three": "水火木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 32,
+        "外": 17,
+        "總": 40
+      },
+      "three": "水火木",
+      "numericalRejects": [
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 33,
+        "外": 18,
+        "總": 41
+      },
+      "three": "水火火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 16,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 24,
+        "地": 34,
+        "外": 19,
+        "總": 42
+      },
+      "three": "水火火",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 21,
+        "外": 5,
+        "總": 29
+      },
+      "three": "水土木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 22,
+        "外": 6,
+        "總": 30
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 23,
+        "外": 7,
+        "總": 31
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 24,
+        "外": 8,
+        "總": 32
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 25,
+        "外": 9,
+        "總": 33
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 26,
+        "外": 10,
+        "總": 34
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 27,
+        "外": 11,
+        "總": 35
+      },
+      "three": "水土金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 28,
+        "外": 12,
+        "總": 36
+      },
+      "three": "水土金",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 29,
+        "外": 13,
+        "總": 37
+      },
+      "three": "水土水",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 30,
+        "外": 14,
+        "總": 38
+      },
+      "three": "水土水",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 31,
+        "外": 15,
+        "總": 39
+      },
+      "three": "水土木",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 32,
+        "外": 16,
+        "總": 40
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 33,
+        "外": 17,
+        "總": 41
+      },
+      "three": "水土火",
+      "numericalRejects": [],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": true,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 34,
+        "外": 18,
+        "總": 42
+      },
+      "three": "水土火",
+      "numericalRejects": [
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 17,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 25,
+        "地": 35,
+        "外": 19,
+        "總": 43
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 4,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 22,
+        "外": 5,
+        "總": 30
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 5,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 23,
+        "外": 6,
+        "總": 31
+      },
+      "three": "水土火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 6,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 24,
+        "外": 7,
+        "總": 32
+      },
+      "three": "水土火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 7,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 25,
+        "外": 8,
+        "總": 33
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 8,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 26,
+        "外": 9,
+        "總": 34
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 9,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 27,
+        "外": 10,
+        "總": 35
+      },
+      "three": "水土金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 10,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 28,
+        "外": 11,
+        "總": 36
+      },
+      "three": "水土金",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 11,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 29,
+        "外": 12,
+        "總": 37
+      },
+      "three": "水土水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 12,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 30,
+        "外": 13,
+        "總": 38
+      },
+      "three": "水土水",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 13,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 31,
+        "外": 14,
+        "總": 39
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "外格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 14,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 32,
+        "外": 15,
+        "總": 40
+      },
+      "three": "水土木",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋",
+        "人地相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 15,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 33,
+        "外": 16,
+        "總": 41
+      },
+      "three": "水土火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 16,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 34,
+        "外": 17,
+        "總": 42
+      },
+      "three": "水土火",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 17,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 35,
+        "外": 18,
+        "總": 43
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    },
+    {
+      "middle": 18,
+      "last": 18,
+      "grid": {
+        "天": 9,
+        "人": 26,
+        "地": 36,
+        "外": 19,
+        "總": 44
+      },
+      "three": "水土土",
+      "numericalRejects": [
+        "人格未列本次參考表吉數",
+        "地格未列本次參考表吉數",
+        "外格未列本次參考表吉數",
+        "總格未列本次參考表吉數"
+      ],
+      "relationalRejects": [
+        "天人相剋"
+      ],
+      "numericalPass": false,
+      "pass": false
+    }
+  ]
+}

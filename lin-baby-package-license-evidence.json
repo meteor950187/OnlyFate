@@ -1,0 +1,23 @@
+[
+  {
+    "name": "@openfate/bazi-mcp",
+    "version": "0.3.1",
+    "license": "MIT",
+    "licenseFilePresent": true,
+    "licenseHeader": "MIT License\n\nCopyright (c) 2026 OpenFate Engineering"
+  },
+  {
+    "name": "@openfate/bazi-engine",
+    "version": "2.0.0",
+    "license": "MIT",
+    "licenseFilePresent": true,
+    "licenseHeader": "MIT License\n\nCopyright (c) 2026 OpenFate Engineering"
+  },
+  {
+    "name": "@openfate/true-solar-time",
+    "version": "4.0.2",
+    "license": "MIT",
+    "licenseFilePresent": false,
+    "licenseHeader": null
+  }
+]

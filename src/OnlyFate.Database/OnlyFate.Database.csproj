@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.14" />
+    <PackageReference Include="ModelContextProtocol.Core" Version="2.3.0" />
+    <PackageReference Include="NodaTime" Version="3.3.7" />
+    <EmbeddedResource Include="../../resources/samples/openfate-lin.json" LogicalName="Samples.openfate-lin.json" />
+    <EmbeddedResource Include="../../resources/naming/limited-v2.json" LogicalName="Naming.limited-v2.json" />
+    <EmbeddedResource Include="../../resources/geography/cities15000.zip" LogicalName="Geography.cities15000.zip" />
+    <EmbeddedResource Include="../../resources/geography/countryInfo.txt" LogicalName="Geography.countryInfo.txt" />
+    <EmbeddedResource Include="../../resources/geography/admin1CodesASCII.txt" LogicalName="Geography.admin1CodesASCII.txt" />
+    <EmbeddedResource Include="../../resources/geography/source.json" LogicalName="Geography.source.json" />
+    <EmbeddedResource Include="../../database/migrations/*.sql" LogicalName="Migrations.%(Filename)%(Extension)" />
+    <EmbeddedResource Include="../../database/checks/*.sql" LogicalName="Checks.%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>

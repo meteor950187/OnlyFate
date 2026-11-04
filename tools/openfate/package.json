@@ -1,0 +1,10 @@
+{
+  "name": "onlyfate-openfate-runtime",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Pinned local OpenFate MCP runtime for the Windows desktop app",
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@openfate/bazi-mcp": "0.3.1"
+  }
+}

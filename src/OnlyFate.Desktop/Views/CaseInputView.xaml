@@ -1,0 +1,115 @@
+<UserControl x:Class="OnlyFate.Desktop.Views.CaseInputView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Language="zh-TW" FontFamily="Microsoft JhengHei UI" FontSize="14" Foreground="#173F36">
+    <UserControl.Resources>
+        <ResourceDictionary><ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="../DesktopTheme.xaml" />
+        </ResourceDictionary.MergedDictionaries></ResourceDictionary>
+    </UserControl.Resources>
+    <StackPanel Margin="8,8,18,24">
+        <Border Background="#F7F5EE" CornerRadius="7" Padding="12,9" Margin="0,0,0,22"><TextBlock Text="＊為必填。第一版支援單字姓、兩字名及國語讀音。" Style="{StaticResource Help}" Margin="0" /></Border>
+        <TextBlock Text="01  出生資料" Style="{StaticResource SectionTitle}" Margin="0,0,0,18" />
+        <Grid Margin="0,0,0,18">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+            <StackPanel Margin="0,0,12,0">
+                <TextBlock Text="姓氏＊" Style="{StaticResource FieldLabel}" />
+                <TextBox x:Name="SurnameBox" AutomationProperties.Name="姓氏" />
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="性別＊" Style="{StaticResource FieldLabel}" />
+                <ComboBox x:Name="GenderBox" SelectedValuePath="Tag" SelectedIndex="0" AutomationProperties.Name="性別">
+                    <ComboBoxItem Tag="" Content="請選擇" /><ComboBoxItem Tag="male" Content="男" /><ComboBoxItem Tag="female" Content="女" />
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+        <Grid Margin="0,0,0,18">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+            <StackPanel Margin="0,0,12,0">
+                <TextBlock Text="國曆出生日期＊" Style="{StaticResource FieldLabel}" />
+                <DatePicker x:Name="BirthDatePicker" MinHeight="36" SelectedDateFormat="Short"
+                            DateValidationError="InvalidBirthDate" SelectedDateChanged="BirthDateChanged"
+                            AutomationProperties.Name="國曆出生日期" />
+                <TextBlock x:Name="LunarDateText" Text="選擇國曆後，自動換算農曆與閏月。" Style="{StaticResource Help}" />
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="出生時間＊" Style="{StaticResource FieldLabel}" />
+                <StackPanel Orientation="Horizontal">
+                    <ComboBox x:Name="BirthHourBox" Width="76" AutomationProperties.Name="出生時間時" />
+                    <TextBlock Text="時" VerticalAlignment="Center" Margin="6,0,10,0" />
+                    <ComboBox x:Name="BirthMinuteBox" Width="76" AutomationProperties.Name="出生時間分" />
+                    <TextBlock Text="分" VerticalAlignment="Center" Margin="6,0,0,0" />
+                </StackPanel>
+                <TextBlock Text="出生地的 24 小時制時間，不預設時分。" Style="{StaticResource Help}" />
+            </StackPanel>
+        </Grid>
+        <Grid Margin="0,0,0,18">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+            <StackPanel Margin="0,0,12,0">
+                <TextBlock Text="出生國家／地區＊" Style="{StaticResource FieldLabel}" />
+                <ComboBox x:Name="BirthCountryBox" IsEditable="True" IsTextSearchEnabled="False"
+                          LostKeyboardFocus="CountryFocusLeft" AutomationProperties.Name="出生國家地區" />
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="出生城市＊" Style="{StaticResource FieldLabel}" />
+                <ComboBox x:Name="BirthCityBox" IsEditable="True" IsTextSearchEnabled="False" AutomationProperties.Name="出生城市" />
+            </StackPanel>
+        </Grid>
+        <TextBlock Text="可選擇或直接輸入出生地；不要填現在居住地。" Style="{StaticResource Help}" Margin="0,-10,0,18" />
+        <TextBlock Text="詳細地點（選填）" Style="{StaticResource FieldLabel}" />
+        <TextBox x:Name="BirthLocationDetailBox" AutomationProperties.Name="出生詳細地點" />
+        <TextBlock Text="例如出生醫院、地址或地標。" Style="{StaticResource Help}" />
+
+        <Separator Margin="0,24" />
+        <TextBlock Text="02  用字限制" Style="{StaticResource SectionTitle}" Margin="0,0,0,18" />
+        <TextBlock Text="避諱字（選填）" Style="{StaticResource FieldLabel}" />
+        <Grid>
+            <Grid.Style><Style TargetType="Grid"><Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=NoAvoidanceBox}" Value="True"><Setter Property="IsEnabled" Value="False" /></DataTrigger>
+            </Style.Triggers></Style></Grid.Style>
+            <TextBox x:Name="AvoidCharactersBox" MinHeight="82" AcceptsReturn="True" TextWrapping="Wrap"
+                     VerticalContentAlignment="Top" AutomationProperties.Name="避諱字" />
+            <TextBlock IsHitTestVisible="False" Margin="11,9" FontSize="12" Foreground="#7A8782" TextWrapping="Wrap"
+                       Text="例如：宏、志。若希望避開父母或長輩名字中的同音字，也請填入對應字，並選擇「同字與同音字」。">
+                <TextBlock.Style><Style TargetType="TextBlock"><Setter Property="Visibility" Value="Collapsed" /><Style.Triggers>
+                    <DataTrigger Binding="{Binding Text, ElementName=AvoidCharactersBox}" Value=""><Setter Property="Visibility" Value="Visible" /></DataTrigger>
+                </Style.Triggers></Style></TextBlock.Style>
+            </TextBlock>
+        </Grid>
+        <ComboBox x:Name="AvoidMatchModeBox" SelectedValuePath="Tag" SelectedIndex="0" Margin="0,8,0,0" AutomationProperties.Name="避諱字比對方式">
+            <ComboBox.Style><Style TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}"><Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=NoAvoidanceBox}" Value="True"><Setter Property="IsEnabled" Value="False" /></DataTrigger>
+            </Style.Triggers></Style></ComboBox.Style>
+            <ComboBoxItem Tag="" Content="有填避諱字時，請選擇比對方式" />
+            <ComboBoxItem Tag="same_character" Content="只避同字" /><ComboBoxItem Tag="same_sound_tone" Content="同字與同音字（國語，同聲調）" />
+        </ComboBox>
+        <CheckBox x:Name="NoAvoidanceBox" Content="已確認沒有避諱字" Margin="0,10,0,0" Checked="ClearAvoidance" />
+        <TextBlock Text="只需填入希望避開的字，不必提供父母或長輩完整姓名。留白表示未提供。" Style="{StaticResource Help}" />
+
+        <Grid Margin="0,22,0,0">
+            <Grid.ColumnDefinitions><ColumnDefinition Width="*" /><ColumnDefinition Width="*" /></Grid.ColumnDefinitions>
+            <Grid.Style><Style TargetType="Grid"><Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=NoRequiredBox}" Value="True"><Setter Property="IsEnabled" Value="False" /></DataTrigger>
+            </Style.Triggers></Style></Grid.Style>
+            <StackPanel Margin="0,0,12,0">
+                <TextBlock Text="指定字／輩分字（選填）" Style="{StaticResource FieldLabel}" />
+                <TextBox x:Name="RequiredCharacterBox" AutomationProperties.Name="指定字輩分字" />
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="指定字位置" Style="{StaticResource FieldLabel}" />
+                <ComboBox x:Name="RequiredPositionBox" SelectedValuePath="Tag" SelectedIndex="0" AutomationProperties.Name="指定字位置">
+                    <ComboBoxItem Tag="" Content="有指定字時請選擇" /><ComboBoxItem Tag="first" Content="名首（姓氏後第一字）" />
+                    <ComboBoxItem Tag="last" Content="名末（最後一字）" /><ComboBoxItem Tag="either" Content="不限位置" />
+                </ComboBox>
+            </StackPanel>
+        </Grid>
+        <CheckBox x:Name="NoRequiredBox" Content="已確認沒有指定字或輩分字" Margin="0,10,0,0" Checked="ClearRequiredCharacter" />
+        <TextBlock Text="指定字目前填一個字。留白表示未提供，不會自動當成已確認沒有。" Style="{StaticResource Help}" />
+
+        <Separator Margin="0,24" />
+        <TextBlock Text="03  需求與期望（選填）" Style="{StaticResource SectionTitle}" Margin="0,0,0,16" />
+        <TextBox x:Name="RemarksBox" MinHeight="112" AcceptsReturn="True" TextWrapping="Wrap"
+                 VerticalContentAlignment="Top" VerticalScrollBarVisibility="Auto" AutomationProperties.Name="需求與期望" />
+        <TextBlock Text="可自由描述希望的寓意、風格、閱讀習慣或其他要求。保留原文供後續判讀與選名參考，無法處理的部分不採用。" Style="{StaticResource Help}" />
+    </StackPanel>
+</UserControl>
