@@ -50,11 +50,11 @@ public sealed class Step4Service(string databasePath)
         });
     }
 
-    public Task<ChartRunResult> ExecuteAsync(long caseId,long revisionId,string model,IAnalysisClient client,CancellationToken token=default)
+    public Task<ChartRunResult> ExecuteAsync(long caseId,long revisionId,string model,ModelConnection connection,CancellationToken token=default)
     {
         token.ThrowIfCancellationRequested();
         var context=Prepare(caseId,revisionId);
-        return new ModelCallRunner(databasePath).RunAsync(caseId,revisionId,4,model,client,context,NamingContract.Version,NamingContract.Request,NamingContract.Validate,
+        return new ModelCallRunner(databasePath).RunAsync(caseId,revisionId,4,model,connection,context,NamingContract.Version,NamingContract.Request,NamingContract.Validate,
             (run,step,prose)=> {
                 var current=Prepare(caseId,revisionId);
                 foreach(string field in new[]{"sourceChartRunId","sourceAnalysisRunId"})

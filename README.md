@@ -6,7 +6,7 @@ OnlyFate 是 Windows 本機應用程式，將案件輸入、八字排盤、AI �
 
 專案的商業目標是降低服務門檻與製作成本，最終讓商家能直接交付家長看得懂的正式報告。產品設計不以命理老師操作或逐案審稿為前提，也不要求家長理解開發用的檢查紀錄。
 
-> **目前為研究試行版。** Step 1–6 的程式流程已接通，另有獨立離線示範；命理取用方法、字五行分類與真實 OpenAI 模型品質仍待驗證。目前的示範報告不能代表已達正式商用的命理品質。
+> **目前為研究試行版。** Step 1–6 的程式流程已接通，另有獨立離線示範；命理取用方法、字五行分類與真實模型（OpenAI／Claude）品質仍待驗證。目前的示範報告不能代表已達正式商用的命理品質。
 
 ## 成品會是什麼？
 
@@ -67,7 +67,7 @@ C# MCP client 啟動本機 OpenFate Node.js 程序，先取得排盤政策，再
 
 ### Step 3：第一次 AI 呼叫——命理判讀
 
-程式從 SQLite 讀取同一案件版本的有效命盤，將案件條件、命盤事實、固定試行規則及備註原文組成 context，送往 OpenAI Responses API。
+程式從 SQLite 讀取同一案件版本的有效命盤，將案件條件、命盤事實、固定試行規則及備註原文組成 context，送往所選的模型服務（OpenAI Responses API 或 Claude Messages API）。
 
 模型的任務是提出盤面摘要、命名五行方向、引用依據、備註取捨與阻擋議題。候選方法以旺衰扶抑為主，另檢查調候適用性；這是本專案的試行規則，不是 OpenFate 已完成的喜用神決策。
 
@@ -113,9 +113,9 @@ HTML 與 PDF 分別保存產出狀態，不把預覽成功當成 PDF 已完成�
 
 每一步都準備獨立的 API request，只傳必要的前步結果。使用同一個模型不代表模型自動記得上一步；應用程式不傳整段開發聊天，也不靠長期對話保存流程狀態。
 
-請求由四個部分構成：`model` 指定模型、`instructions` 定義任務與規則、`input` 放本次資料、`text.format` 定義嚴格 JSON Schema。`context` 是本專案放在輸入資料中的結構，不是 OpenAI 自動管理的記憶。實際請求可先在介面預覽，再決定執行。
+請求由四個部分構成：模型 ID、任務與規則指令、本次資料，以及嚴格 JSON Schema。`context` 是本專案放在輸入資料中的結構，不是模型服務自動管理的記憶。實際請求可先在介面預覽，再決定執行。
 
-目前由自訂的 [OpenAiResponsesClient](src/OnlyFate.Database/OpenAiResponsesClient.cs) 使用 `HttpClient` 呼叫 `POST https://api.openai.com/v1/responses`，未採用 OpenAI SDK 或 Agents SDK，也沒有提供讓模型自行選用的 `tools`。模型不直接讀寫 SQLite 或呼叫 MCP。
+模型服務以 adapter 切換：各階段契約產生與廠商無關的請求，再由 OpenAI 或 Claude 的 adapter 轉成實際 request，並以 `HttpClient` 直接呼叫官方 endpoint；未採用廠商 SDK 或 Agents SDK，也沒有提供讓模型自行選用的 `tools`。兩家的格式差異見 [AI 呼叫流程](docs/ai-call-flow.md#模型服務-adapter)。模型不直接讀寫 SQLite 或呼叫 MCP。
 
 本專案所說的 **harness** 是 C# 的執行控制：準備 context、保存 request、呼叫 API、讀取回應、程式驗證、有限修正、停止及寫回。共用入口是 [ModelCallRunner](src/OnlyFate.Database/ModelCallRunner.cs)，各階段透過自己的契約限定模型責任。
 
@@ -139,10 +139,10 @@ HTML 與 PDF 分別保存產出狀態，不把預覽成功當成 PDF 已完成�
 - **案件版本**：修改輸入會追加版本，不覆寫原始歷史。
 - **執行紀錄**：保留工具參數、模型 request／response、狀態、耗時及有回傳的 token usage。
 - **來源一致性**：案件改版或上游重做後，舊下游結果不再當成有效結果使用，但仍保留紀錄。
-- **交易邊界**：等待 MCP 或 OpenAI 時不持有 SQLite 交易；寫回前再核對來源。
+- **交易邊界**：等待 MCP 或模型服務時不持有 SQLite 交易；寫回前再核對來源。
 - **重新開啟**：載入已保存結果，不自動重新呼叫工具或付費模型。
 
-本機保存不代表全程離線：OpenAI 呼叫會送出該步的 context，備註也可能包含使用者自行輸入的個資。API key 僅用於請求認證，不寫入 SQLite、context 或報告；`store=false` 也不等於服務端完全零資料保留。
+本機保存不代表全程離線：模型呼叫會送出該步的 context，備註也可能包含使用者自行輸入的個資。API key 僅用於請求認證，不寫入 SQLite、context 或報告；`store=false` 也不等於服務端完全零資料保留。
 
 資料表與交易設計見 [DB Schema](docs/database-schema.md)；實際欄位以 [SQL migrations](database/migrations/001_Initial.sql) 為準。
 
@@ -155,7 +155,7 @@ HTML 與 PDF 分別保存產出狀態，不把預覽成功當成 PDF 已完成�
 | WebView2、HTML／CSS | 本機報告預覽與 PDF 列印 |
 | OpenFate MCP、Node.js | 本機八字計算工具 |
 | GeoNames、NodaTime | 出生城市候選及歷史時區解析 |
-| OpenAI Responses API | 三階段結構化模型輸出 |
+| OpenAI Responses API／Claude Messages API | 三階段結構化模型輸出，可在介面切換 |
 
 第一版不需要架設網站或雲端資料庫。相依套件使用各自的 lock file，開發與維運以本機需求為主；目前沒有加入微服務、RAG 或向量搜尋。
 
@@ -165,12 +165,12 @@ HTML 與 PDF 分別保存產出狀態，不把預覽成功當成 PDF 已完成�
 
 1. 依 [桌面程式 README](src/OnlyFate.Desktop/README.md#建置與執行) 還原 OpenFate 及 NuGet 套件，再建置、測試與 publish。
 2. 開啟產生的 `output/app/OnlyFate.Desktop.exe`。發行資料夾不納入 Git，目前沒有安裝包，也未附帶 Node.js 執行檔。
-3. 先使用離線示範確認介面與報告；可加 `--demo` 啟動。示範使用固定虛構資料，不呼叫真實 OpenAI，也不代表模型品質驗證。
-4. 實際執行 AI 階段時，在介面提供模型 ID 與 API key，或使用 `OPENAI_MODEL`／`OPENAI_API_KEY` 環境變數。目前沒有預設模型。
+3. 先使用離線示範確認介面與報告；可加 `--demo` 啟動。示範使用固定虛構資料，不呼叫真實模型服務，也不代表模型品質驗證。
+4. 實際執行 AI 階段時，在介面選擇模型服務並提供模型 ID 與 API key，或使用 `OPENAI_MODEL`／`OPENAI_API_KEY`、`ANTHROPIC_MODEL`／`ANTHROPIC_API_KEY` 環境變數。目前沒有預設模型。
 
 測試入口及範圍見 [tests README](tests/README.md)。核心測試使用隔離資料庫；WPF 測試不顯示視窗、不操作滑鼠鍵盤。模型測試使用假 transport；OpenFate 則有真正的本機 MCP 計算測試。視覺及完整操作驗收見 [驗收紀錄](docs/acceptance.md)。
 
-**仍待完成的驗證**：正式命理規則與反例、字庫涵蓋與分類品質、真實 OpenAI 的結果品質／成本／延遲，以及正式散佈所需的套件授權通知。現階段支援範圍以單字姓、兩字名及有限國語字庫為主，不宣稱支援所有姓氏、方言或家族限制。
+**仍待完成的驗證**：正式命理規則與反例、字庫涵蓋與分類品質、真實 OpenAI／Claude 的結果品質／成本／延遲，以及正式散佈所需的套件授權通知。現階段支援範圍以單字姓、兩字名及有限國語字庫為主，不宣稱支援所有姓氏、方言或家族限制。
 
 ## 專案目錄與閱讀入口
 

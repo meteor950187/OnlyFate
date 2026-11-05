@@ -31,12 +31,9 @@ public static class AnalysisContract
         ["blockingIssues"] = ArrayOf(StringField)
     }));
 
-    public static JsonElement Request(string model, JsonElement context, JsonElement? prior = null, IReadOnlyList<string>? errors = null) => Step2Json.Element(new
-    {
-        model, instructions = Instructions, store = false, max_output_tokens = 6000,
-        input = new[] { new { role = "user", content = Step2Json.Element(new { context, repair = prior is null ? null : new { previousOutput = prior, errors } }).GetRawText() } },
-        text = new { format = new { type = "json_schema", name = "naming_analysis", strict = true, schema = Schema } }
-    });
+    public static ModelRequest Request(string model, JsonElement context, JsonElement? prior = null, IReadOnlyList<string>? errors = null) => new(
+        model, Instructions, Step2Json.Element(new { context, repair = prior is null ? null : new { previousOutput = prior, errors } }).GetRawText(),
+        "naming_analysis", Schema, 6000);
 
     public static IReadOnlyList<string> Validate(JsonElement output, JsonElement facts, string remarks)
     {

@@ -66,10 +66,10 @@ public sealed class Step5Service(string databasePath)
         if(naming?.Status!="completed"||naming.Chart is null)throw new InvalidOperationException("請先完成目前版本的選名。");
         return ReportDataAssembler.ProseContext(naming);
     }
-    public Task<ChartRunResult> ExecuteAsync(long caseId,long revisionId,string model,IAnalysisClient client,CancellationToken token=default)
+    public Task<ChartRunResult> ExecuteAsync(long caseId,long revisionId,string model,ModelConnection connection,CancellationToken token=default)
     {
         token.ThrowIfCancellationRequested();var context=Prepare(caseId,revisionId);
-        return new ModelCallRunner(databasePath).RunAsync(caseId,revisionId,5,model,client,context,ReportContract.Version,ReportContract.Request,ReportContract.Validate,
+        return new ModelCallRunner(databasePath).RunAsync(caseId,revisionId,5,model,connection,context,ReportContract.Version,ReportContract.Request,ReportContract.Validate,
             (run,step,prose)=>{
                 var current=Prepare(caseId,revisionId);
                 if(current.GetProperty("sourceNamingRunId").GetInt64()!=context.GetProperty("sourceNamingRunId").GetInt64())throw new CaseConflictException();

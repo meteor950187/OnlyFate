@@ -22,7 +22,7 @@ public partial class MainWindow
         try
         {
             var context = await Task.Run(() => AnalysisService().Prepare(activeCaseId!.Value, activeRevisionId!.Value));
-            ShowRequest(AnalysisContract.Request(ModelId(), context));
+            ShowRequest(Provider().Adapter.BuildRequest(AnalysisContract.Request(ModelId(), context)));
             AnalysisStatus.Text = "這是將送出的指令、資料與 schema；尚未呼叫 API。";
         }
         catch (Exception exception) { AnalysisStatus.Text = exception is InvalidOperationException ? exception.Message : "無法準備 context。"; }
@@ -32,21 +32,21 @@ public partial class MainWindow
     private async void AnalyzeCase(object sender, RoutedEventArgs e)
     {
         if (!CanUseSavedCase()) return;
-        if(!AllowRealCalls() || !TryCredential(out string key,out string model)) return;
+        if(!AllowRealCalls() || !TryCredential(out var provider,out string key,out string model)) return;
         ResetNaming();
         using var cancellation = new CancellationTokenSource();
         chartCancellation = cancellation;
         CancelChartButton.Content = "取消處理";
         CancelChartButton.Visibility = Visibility.Visible;
-        SetCaseBusy(true, "正在呼叫 OpenAI，最多一次修正，總等待期限 120 秒…");
+        SetCaseBusy(true, $"正在呼叫 {provider.DisplayName}，最多一次修正，總等待期限 120 秒…");
         AnalysisStatus.Text = "判讀中…";
         AnalysisDetails.Clear();
         long caseId = activeCaseId!.Value, revisionId = activeRevisionId!.Value;
         try
         {
             using var http = new HttpClient(new HttpClientHandler { AllowAutoRedirect = false }) { Timeout = Timeout.InfiniteTimeSpan };
-            var client = new OpenAiResponsesClient(http, key);
-            var result = await Task.Run(() => AnalysisService().ExecuteAsync(caseId, revisionId, model, client, cancellation.Token));
+            var connection = provider.Connect(http, key);
+            var result = await Task.Run(() => AnalysisService().ExecuteAsync(caseId, revisionId, model, connection, cancellation.Token));
             ShowAnalysis(result);
             CaseMessage.Text = "試行判讀已儲存；可重新開啟查看。";
         }

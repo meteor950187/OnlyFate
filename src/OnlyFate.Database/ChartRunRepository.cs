@@ -93,24 +93,20 @@ internal sealed class ChartRunRepository(string databasePath)
         return new(reader.GetInt64(0), revisionId, reader.GetString(1), inputDoc.RootElement.Clone(), chart, reader.IsDBNull(4) ? null : reader.GetString(4));
     }
 
-    internal long StartModelCall(long step, int number, string model, JsonElement request, string promptVersion = AnalysisContract.Version)
+    internal long StartModelCall(long step, int number, string provider, string operation, string model, JsonElement request, string promptVersion)
     {
         using var db = Open();
         return (long)Scalar(db, null, """
             INSERT INTO ExecutionCall(forProcessingStepID,CallNumber,CallKind,Provider,Operation,ModelName,PromptVersion,RequestJson)
-            VALUES($step,$number,'model','OpenAI','responses.create',$model,$version,$request); SELECT last_insert_rowid();
-            """, ("$step", step), ("$number", number), ("$model", model), ("$version", promptVersion), ("$request", request.GetRawText()))!;
+            VALUES($step,$number,'model',$provider,$operation,$model,$version,$request); SELECT last_insert_rowid();
+            """, ("$step", step), ("$number", number), ("$provider", provider), ("$operation", operation), ("$model", model), ("$version", promptVersion), ("$request", request.GetRawText()))!;
     }
 
-    internal void ModelUsage(long call, JsonElement body)
+    internal void ModelUsage(long call, ModelResult result)
     {
-        string? id = body.TryGetProperty("id", out var identifier) && identifier.ValueKind == JsonValueKind.String ? identifier.GetString() : null;
-        string? model = body.TryGetProperty("model", out var actual) && actual.ValueKind == JsonValueKind.String ? actual.GetString() : null;
-        long? ReadUsage(string name) => body.TryGetProperty("usage", out var usage) && usage.ValueKind == JsonValueKind.Object
-            && usage.TryGetProperty(name, out var value) && value.ValueKind == JsonValueKind.Number && value.TryGetInt64(out long count) && count >= 0 ? count : null;
         using var db = Open();
         Execute(db, null, "UPDATE ExecutionCall SET ProviderRequestID=$id,ModelName=coalesce($model,ModelName),InputTokens=$input,OutputTokens=$output WHERE ExecutionCallID=$call",
-            ("$id", id), ("$model", model), ("$input", ReadUsage("input_tokens")), ("$output", ReadUsage("output_tokens")), ("$call", call));
+            ("$id", result.ProviderRequestId), ("$model", result.ActualModel), ("$input", result.InputTokens), ("$output", result.OutputTokens), ("$call", call));
     }
 
     private static void AssertCurrent(SqliteConnection db, SqliteTransaction tx, long caseId, long revisionId)

@@ -33,6 +33,7 @@ public sealed class NamingFlowTests : IDisposable
     {
         public List<JsonElement> Requests{get;}=[];
         public Task<AiResponse> SendAsync(JsonElement request,CancellationToken token){Requests.Add(request);return Task.FromResult(send(request,Requests.Count));}
+        public static implicit operator ModelConnection(Client client) => new(OpenAiResponsesAdapter.Instance, client);
     }
     private static AiResponse Reply(JsonElement request,bool valid=true)
     {

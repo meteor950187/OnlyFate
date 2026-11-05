@@ -40,6 +40,7 @@ public sealed class AnalysisFlowTests : IDisposable
     {
         public List<JsonElement> Requests { get; } = [];
         public Task<AiResponse> SendAsync(JsonElement request, CancellationToken token) { Requests.Add(request); return Task.FromResult(send(Requests.Count)); }
+        public static implicit operator ModelConnection(Client client) => new(OpenAiResponsesAdapter.Instance, client);
     }
     [Fact] public async Task RepairsOncePersistsUsageAndReopensTrialWithoutAllowingSelection()
     {
@@ -51,6 +52,32 @@ public sealed class AnalysisFlowTests : IDisposable
         Assert.Equal(result.ProcessingRunID, new Step3Service(Db).Latest(saved.CaseRevisionID)!.ProcessingRunID);
         Assert.Equal(2L, Scalar("SELECT count(*) FROM ExecutionCall WHERE CallKind='model' AND InputTokens=100"));
         Assert.Equal(0L, Scalar("SELECT count(*) FROM CaseRevision WHERE PendingIssuesJson LIKE '%remarks_interpretation_pending%'"));
+    }
+    private static JsonElement ClaudeEnvelope(JsonElement openAi, string stop = "end_turn") => Step2Json.Element(new {
+        id = "msg_test", type = "message", role = "assistant", model = "claude-test", stop_reason = stop,
+        content = new[] { new { type = "text", text = openAi.GetProperty("output")[0].GetProperty("content")[0].GetProperty("text").GetString() } },
+        usage = new { input_tokens = 120, output_tokens = 60 }
+    });
+    [Fact] public async Task ClaudeAdapterRunsSameRepairFlowAndRecordsProvider()
+    {
+        var saved = Seed(); var client = new Client(n => new(200, ClaudeEnvelope(Envelope(n == 2))));
+        var result = await new Step3Service(Db).ExecuteAsync(saved.NamingCaseID, saved.CaseRevisionID, "claude-test", new ModelConnection(ClaudeMessagesAdapter.Instance, client));
+        Assert.Equal("completed", result.Status);
+        Assert.Equal(2, client.Requests.Count);
+        Assert.True(client.Requests[0].TryGetProperty("system", out _));
+        Assert.Equal("json_schema", client.Requests[0].GetProperty("output_config").GetProperty("format").GetProperty("type").GetString());
+        Assert.False(client.Requests[0].TryGetProperty("text", out _));
+        Assert.Contains("previousOutput", client.Requests[1].GetRawText());
+        Assert.Equal(2L, Scalar("SELECT count(*) FROM ExecutionCall WHERE Provider='Anthropic' AND Operation='messages.create' AND ModelName='claude-test' AND ProviderRequestID='msg_test' AND InputTokens=120 AND OutputTokens=60"));
+    }
+    [Theory] [InlineData("refusal", "MODEL_REFUSAL")] [InlineData("max_tokens", "API_NOT_COMPLETED")]
+    public async Task ClaudeRefusalOrTruncationStopsWithoutRepair(string stop, string code)
+    {
+        var saved = Seed(); var client = new Client(_ => new(200, ClaudeEnvelope(Envelope(trial: true), stop)));
+        await Assert.ThrowsAsync<InvalidOperationException>(() => new Step3Service(Db).ExecuteAsync(saved.NamingCaseID, saved.CaseRevisionID, "claude-test", new ModelConnection(ClaudeMessagesAdapter.Instance, client)));
+        Assert.Single(client.Requests);
+        Assert.Equal(1L, Scalar($"SELECT count(*) FROM ExecutionCall WHERE Provider='Anthropic' AND Status='failed' AND ErrorCode='{code}'"));
+        Assert.Null(new Step3Service(Db).Latest(saved.CaseRevisionID)!.Chart);
     }
     [Fact] public async Task TrialDirectionCanProceedWithoutOpeningFormalDelivery()
     {
@@ -113,10 +140,29 @@ public sealed class AnalysisFlowTests : IDisposable
             return new(HttpStatusCode.Unauthorized) { Content = new StringContent("{\"error\":\"secret-test-key\"}", Encoding.UTF8, "application/json") };
         }
     }
+    private sealed class ClaudeHandler : HttpMessageHandler
+    {
+        public string? Body, Key, Version; public bool HasAuthorization;
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken token)
+        {
+            Assert.Equal("https://api.anthropic.com/v1/messages", request.RequestUri!.AbsoluteUri);
+            Body = await request.Content!.ReadAsStringAsync(token); HasAuthorization = request.Headers.Authorization is not null;
+            Key = request.Headers.GetValues("x-api-key").Single(); Version = request.Headers.GetValues("anthropic-version").Single();
+            return new(HttpStatusCode.Unauthorized) { Content = new StringContent("{\"error\":\"secret-test-key\"}", Encoding.UTF8, "application/json") };
+        }
+    }
+    [Fact] public async Task ClaudeTransportUsesApiKeyHeaderAndRedactsEchoedCredential()
+    {
+        using var handler = new ClaudeHandler(); using var http = new HttpClient(handler);
+        var reply = await new ClaudeMessagesClient(http, "secret-test-key").SendAsync(ClaudeMessagesAdapter.Instance.BuildRequest(AnalysisContract.Request("claude-test", Step2Json.Element(new { }))), default);
+        Assert.Equal("secret-test-key", handler.Key); Assert.Equal(ClaudeMessagesClient.ApiVersion, handler.Version); Assert.False(handler.HasAuthorization);
+        Assert.DoesNotContain("secret-test-key", handler.Body!); Assert.DoesNotContain("secret-test-key", reply.Body.GetRawText());
+        Assert.Equal(401, reply.HttpStatus);
+    }
     [Fact] public async Task TransportUsesHeaderOnlyAndRedactsEchoedCredential()
     {
         using var handler = new Handler(); using var http = new HttpClient(handler);
-        var reply = await new OpenAiResponsesClient(http, "secret-test-key").SendAsync(AnalysisContract.Request("test-model", Step2Json.Element(new { })), default);
+        var reply = await new OpenAiResponsesClient(http, "secret-test-key").SendAsync(OpenAiResponsesAdapter.Instance.BuildRequest(AnalysisContract.Request("test-model", Step2Json.Element(new { }))), default);
         Assert.Equal("secret-test-key", handler.Authorization); Assert.DoesNotContain("secret-test-key", handler.Body!); Assert.DoesNotContain("secret-test-key", reply.Body.GetRawText());
     }
     public void Dispose()

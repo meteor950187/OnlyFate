@@ -33,6 +33,7 @@ public sealed class ReportFlowTests : IDisposable
     {
         public List<JsonElement> Requests{get;}=[];
         public Task<AiResponse> SendAsync(JsonElement request,CancellationToken token){Requests.Add(request);return Task.FromResult(send(request,Requests.Count));}
+        public static implicit operator ModelConnection(Client client) => new(OpenAiResponsesAdapter.Instance, client);
     }
     private static AiResponse Reply(JsonElement request,bool valid=true)
     {
@@ -244,6 +245,7 @@ public sealed class ReportFlowTests : IDisposable
     private sealed class IgnoringCancellationClient:IAnalysisClient
     {
         public Task<AiResponse> SendAsync(JsonElement request,CancellationToken token)=>new TaskCompletionSource<AiResponse>(TaskCreationOptions.RunContinuationsAsynchronously).Task;
+        public static implicit operator ModelConnection(IgnoringCancellationClient client) => new(OpenAiResponsesAdapter.Instance, client);
     }
     [Theory] [InlineData(3)] [InlineData(4)] [InlineData(5)]
     public async Task SharedRunnerStopsEvenIfTransportIgnoresCancellation(int step)

@@ -53,7 +53,7 @@ HTML採響應式卡片，PDF採A4章節分頁；兩者同一固定資料，版�
 
 [NamingEngine](../src/OnlyFate.Database/NamingEngine.cs)、[NamingPools](../src/OnlyFate.Database/NamingPools.cs)、[NamingContract](../src/OnlyFate.Database/NamingContract.cs)、[Step4Service](../src/OnlyFate.Database/Step4Service.cs)、[ReportContract](../src/OnlyFate.Database/ReportContract.cs)、[Step5Service](../src/OnlyFate.Database/Step5Service.cs)、[ReportRepository](../src/OnlyFate.Database/ReportRepository.cs)、[Renderer](../src/OnlyFate.Database/ReportHtmlRenderer.cs)、[Artifacts](../src/OnlyFate.Database/ReportArtifactService.cs)。
 
-API格式依據：[OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses)。本機內容與列印依據：[WebView2本機內容](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/working-with-local-content)、[列印API](https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/print)。
+API格式依據：[OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs?api-mode=responses)、[Claude Structured Outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs)。本機內容與列印依據：[WebView2本機內容](https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/working-with-local-content)、[列印API](https://learn.microsoft.com/en-us/microsoft-edge/webview2/how-to/print)。
 
 報告現在保存 `namingBasis`：取自選名所引用的同一個 Step 3 run，組裝前核對案件版本、命盤來源、引用事實及選字五行一致。白話摘要、方向、依據與適用限制沿用該判讀，不由 Step 5 事後編造。家長報告先說白話取名方向，再逐組提供配字及逐字說明；模型呼叫數與 Step 5 context 不變。版型已升版，歷史產物保留。
 

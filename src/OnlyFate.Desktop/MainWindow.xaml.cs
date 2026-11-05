@@ -22,8 +22,8 @@ public partial class MainWindow : Window
   databasePath=isDemo?new DemoWorkspace(dataRoot).DatabasePath:DatabaseSchema.DefaultDatabasePath;
   InitializeComponent();
   clearPreview=()=>ReportPreview.CoreWebView2?.NavigateToString("<!doctype html><html><body></body></html>");
-  if(isDemo){Title="OnlyFate｜離線示範｜虛構案例";ModeBanner.Text="離線示範｜虛構案例 · H1 土金為條件假設，尚未排除 H2 · 無模型呼叫";OpenDemoButton.Content="建立新示範案例";AnalysisKey.IsEnabled=false;AnalysisModel.IsEnabled=false;}
-  else AnalysisModel.Text=Environment.GetEnvironmentVariable("OPENAI_MODEL")??"";
+  if(isDemo){Title="OnlyFate｜離線示範｜虛構案例";ModeBanner.Text="離線示範｜虛構案例 · H1 土金為條件假設，尚未排除 H2 · 無模型呼叫";OpenDemoButton.Content="建立新示範案例";AnalysisKey.IsEnabled=false;AnalysisModel.IsEnabled=false;AnalysisProvider.IsEnabled=false;}
+  AnalysisProvider.ItemsSource=ModelProvider.All;AnalysisProvider.SelectedIndex=0;
   Loaded+=InitializeCases;Closing+=CheckBeforeClosing;Closed+=ClosePreview;
  }
  private async Task EnsurePreview(CancellationToken token)
@@ -85,7 +85,7 @@ public partial class MainWindow : Window
    try {
     var demo=await Task.Run(()=>new DemoWorkspace(dataRoot).CreateNew());
     SetCurrentCase(demo.Case);await RestoreChart(demo.Case.CaseRevisionID);await RestoreAnalysis(demo.Case.CaseRevisionID);await RestoreWorkflow(demo.Case.CaseRevisionID);
-    CaseList.ItemsSource=await Task.Run(()=>caseRepository!.List());CaseMessage.Text="新示範案例已建立；沒有呼叫 OpenFate 或 OpenAI，原案紀錄保留。";
+    CaseList.ItemsSource=await Task.Run(()=>caseRepository!.List());CaseMessage.Text="新示範案例已建立；沒有呼叫 OpenFate 或模型服務，原案紀錄保留。";
    }catch(Exception exception){CaseMessage.Text=SafeError(exception);}finally{SetCaseBusy(false);}
    return;
   }

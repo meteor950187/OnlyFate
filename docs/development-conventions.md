@@ -12,7 +12,7 @@ Windows 本機應用程式、SQLite 與 C#／WPF＋WebView2 均已由使用者�
 | 案件儲存 | 本機 SQLite；不加入多機同步 | Schema v1 與案件新增／儲存／重新開啟已實作；刪除與備份／還原未實作 |
 | 操作介面 | C#／WPF | 案件清單、Step 1 表單與 Step 2 城市確認／排盤介面已實作 |
 | 報告預覽與 PDF | HTML／CSS 報告搭配 WebView2，本機預覽與 PDF 輸出 | 本機空白預覽已驗證；正式報告與 PDF 輸出尚未實作 |
-| 模型呼叫 | OpenAI API；必要資料依步驟送往服務 | HttpClient／Responses API 試行呼叫已實作，模型由設定指定 |
+| 模型呼叫 | OpenAI 或 Claude API，以 adapter 切換；必要資料依步驟送往服務 | HttpClient 直接呼叫 Responses API／Messages API；兩者皆以假 transport 測試，模型由設定指定 |
 | 開發環境 | .NET 10、Windows Desktop Runtime；SDK 選擇由根目錄 global.json 管理 | 依本機現有正式環境採用；WebView2 SDK 版本及相依鎖定由 csproj／packages.lock.json 管理 |
 | 資料庫依賴 | Microsoft.Data.Sqlite，不採 ORM | 資料庫工具與桌面案件存取共用；套件版本由其 csproj／鎖檔管理 |
 | 排盤依賴 | 本機 OpenFate MCP、C# MCP SDK、NodaTime 與離線 GeoNames | 版本、還原及互動見 [Step 2](step-2.md)；正式安裝包尚未實作 |

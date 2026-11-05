@@ -7,7 +7,7 @@ WPF 桌面入口，已接通案件輸入、出生城市／排盤、AI 試行判�
 - Windows；開發使用 .NET 10 SDK，global.json 允許較新 feature band，本次 SDK 10.0.403。
 - 執行需要 .NET 10 Windows Desktop Runtime、WebView2 Evergreen Runtime。目前為 framework-dependent 輸出，未製作安裝包。
 - 排盤需要 PATH 中的 Node.js 20 以上；[OpenFate runtime](../../tools/openfate/README.md) 隨建置複製，初次還原需要網路。
-- OpenAI 模型 ID 與 API key 可在「AI 試行判讀」輸入，或由 `OPENAI_MODEL`／`OPENAI_API_KEY` 環境變數提供。key 僅留本次程序記憶體，可清除；不寫入 SQLite。
+- 模型服務（OpenAI 或 Claude）、模型 ID 與 API key 可在「AI 試行判讀」選擇及輸入，或由 `OPENAI_MODEL`／`OPENAI_API_KEY`、`ANTHROPIC_MODEL`／`ANTHROPIC_API_KEY` 環境變數提供；切換服務會清除本次輸入的 key。key 僅留本次程序記憶體，可清除；不寫入 SQLite。
 
 ## 建置與執行
 

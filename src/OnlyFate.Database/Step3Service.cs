@@ -33,11 +33,11 @@ public sealed class Step3Service(string databasePath)
         });
     }
 
-    public Task<ChartRunResult> ExecuteAsync(long caseId,long revisionId,string model,IAnalysisClient client,CancellationToken token=default)
+    public Task<ChartRunResult> ExecuteAsync(long caseId,long revisionId,string model,ModelConnection connection,CancellationToken token=default)
     {
         token.ThrowIfCancellationRequested();
         var context=Prepare(caseId,revisionId);
-        return new ModelCallRunner(databasePath).RunAsync(caseId,revisionId,3,model,client,context,AnalysisContract.Version,AnalysisContract.Request,
+        return new ModelCallRunner(databasePath).RunAsync(caseId,revisionId,3,model,connection,context,AnalysisContract.Version,AnalysisContract.Request,
             (prose,input)=>AnalysisContract.Validate(prose,input.GetProperty("facts"),input.GetProperty("remarksRaw").GetString()!),
             (run,step,prose)=>{
                 if(Prepare(caseId,revisionId).GetProperty("sourceChartRunId").GetInt64()!=context.GetProperty("sourceChartRunId").GetInt64())throw new CaseConflictException();

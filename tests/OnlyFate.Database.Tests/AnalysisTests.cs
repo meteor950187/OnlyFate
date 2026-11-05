@@ -20,7 +20,7 @@ public class AnalysisTests
     [Fact] public void HugeArrayIndexReturnsValidationError() => Assert.NotEmpty(AnalysisContract.Validate(Output("/items/999999999999999999999"), Step2Json.Element(new { items = new[] { "庚" } }), "希望文雅"));
     [Fact] public void RequestHasNoHistoryToolsOrSecrets()
     {
-        var request = AnalysisContract.Request("configured-model", Facts);
+        var request = OpenAiResponsesAdapter.Instance.BuildRequest(AnalysisContract.Request("configured-model", Facts));
         Assert.False(request.GetProperty("store").GetBoolean());
         Assert.False(request.TryGetProperty("tools", out _));
         Assert.False(request.TryGetProperty("previous_response_id", out _));

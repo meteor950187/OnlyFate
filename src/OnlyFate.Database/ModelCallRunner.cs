@@ -4,8 +4,8 @@ namespace OnlyFate.Database;
 
 internal sealed class ModelCallRunner(string databasePath)
 {
-    public async Task<ChartRunResult> RunAsync(long caseId,long revisionId,int stepNumber,string model,IAnalysisClient client,JsonElement context,string version,
-        Func<string,JsonElement,JsonElement?,IReadOnlyList<string>?,JsonElement> requestFactory,
+    public async Task<ChartRunResult> RunAsync(long caseId,long revisionId,int stepNumber,string model,ModelConnection connection,JsonElement context,string version,
+        Func<string,JsonElement,JsonElement?,IReadOnlyList<string>?,ModelRequest> requestFactory,
         Func<JsonElement,JsonElement,IReadOnlyList<string>> validate,
         Func<long,long,JsonElement,JsonElement> complete,CancellationToken token)
     {
@@ -18,27 +18,21 @@ internal sealed class ModelCallRunner(string databasePath)
             JsonElement? prior=null;IReadOnlyList<string>? errors=null;
             for(int attempt=1;attempt<=2;attempt++) {
                 deadline.Token.ThrowIfCancellationRequested();
-                var request=requestFactory(model.Trim(),context,prior,errors);
-                long call=runs.StartModelCall(step,attempt,model.Trim(),request,version);var watch=Stopwatch.StartNew();
+                var adapter=connection.Adapter;
+                var request=adapter.BuildRequest(requestFactory(model.Trim(),context,prior,errors));
+                long call=runs.StartModelCall(step,attempt,adapter.Provider,adapter.Operation,model.Trim(),request,version);var watch=Stopwatch.StartNew();
                 AiResponse response;
-                try { response=await client.SendAsync(request,deadline.Token).WaitAsync(deadline.Token); }
+                try { response=await connection.Transport.SendAsync(request,deadline.Token).WaitAsync(deadline.Token); }
                 catch(Exception e) {runs.FinishCall(call,e is OperationCanceledException?"cancelled":"failed",null,watch.ElapsedMilliseconds,"TRANSPORT_FAILED");throw;}
                 if(response.Body.ValueKind!=JsonValueKind.Object) response=response with{Body=Step2Json.Element(new{rawResponse=response.Body})};
-                bool done=response.HttpStatus is >=200 and <300 && response.Body.TryGetProperty("status",out var status)&&status.ValueKind==JsonValueKind.String&&status.GetString()=="completed";
-                runs.FinishCall(call,done?"succeeded":"failed",response.Body,watch.ElapsedMilliseconds,done?null:"API_NOT_COMPLETED");runs.ModelUsage(call,response.Body);
-                if(!done)throw new InvalidOperationException($"OpenAI 未完成（HTTP {response.HttpStatus}）。");
-                List<string> texts=[];
-                if(response.Body.TryGetProperty("output",out var items)&&items.ValueKind==JsonValueKind.Array)
-                    foreach(var item in items.EnumerateArray()) {
-                        if(!item.TryGetProperty("type",out var kind)||kind.GetString()!="message"||!item.TryGetProperty("content",out var contents)||contents.ValueKind!=JsonValueKind.Array)continue;
-                        foreach(var content in contents.EnumerateArray()) {
-                            if(!content.TryGetProperty("type",out var type))continue;
-                            if(type.GetString()=="refusal") {runs.FinishCall(call,"failed",response.Body,watch.ElapsedMilliseconds,"MODEL_REFUSAL");throw new InvalidOperationException("模型拒絕本次要求，已保存紀錄。");}
-                            if(type.GetString()=="output_text"&&content.TryGetProperty("text",out var text)&&text.ValueKind==JsonValueKind.String)texts.Add(text.GetString()!);
-                        }
-                    }
-                try {using var doc=JsonDocument.Parse(string.Concat(texts));prior=doc.RootElement.Clone();}
-                catch(JsonException){prior=Step2Json.Element(new{invalidText=string.Concat(texts)});}
+                var result=adapter.ReadResponse(response);
+                string? code=result.Outcome switch{ModelOutcome.Completed=>null,ModelOutcome.Refused=>"MODEL_REFUSAL",_=>"API_NOT_COMPLETED"};
+                runs.FinishCall(call,code is null?"succeeded":"failed",response.Body,watch.ElapsedMilliseconds,code);runs.ModelUsage(call,result);
+                if(result.Outcome==ModelOutcome.NotCompleted)throw new InvalidOperationException($"{adapter.Provider} 未完成（HTTP {response.HttpStatus}）。");
+                if(result.Outcome==ModelOutcome.Refused)throw new InvalidOperationException("模型拒絕本次要求，已保存紀錄。");
+                string texts=result.OutputText;
+                try {using var doc=JsonDocument.Parse(texts);prior=doc.RootElement.Clone();}
+                catch(JsonException){prior=Step2Json.Element(new{invalidText=texts});}
                 errors=validate(prior.Value,context);if(errors.Count!=0)continue;
                 deadline.Token.ThrowIfCancellationRequested();
                 var output=complete(run,step,prior.Value);

@@ -16,16 +16,37 @@
 
 ## Context 具體是什麼？
 
-每次準備一份新的 Responses API request：
+每次由各階段 `Contract.Request` 準備一份與廠商無關的 `ModelRequest`：
 
-1. `instructions`：該階段任務、固定規則與資料優先順序。
-2. `input`：一則 user 資料訊息，內含 `context`；內容由 SQLite 的固定案件版本及前步有效結果組成。
-3. `text.format`：嚴格 JSON schema。
-4. `model`、輸出 token 上限與 `store=false`。
+1. `Instructions`：該階段任務、固定規則與資料優先順序。
+2. `UserContent`：一則 user 資料訊息，內含 `context`；內容由 SQLite 的固定案件版本及前步有效結果組成。
+3. `Schema`：嚴格 JSON schema，與 `SchemaName`。
+4. `Model` 與輸出 token 上限。
+
+再由所選服務的 adapter 轉成實際 request（見下節）。
 
 **第一次就是 Step 3。** 沒有預先存在的應用程式 AI 對話，也不會送入你和 Codex 的開發聊天。Step 4、5 使用各自整理的必要資料；不使用 `previous_response_id`，也不把前面整段 request/response 一路累積。
 
-服務內部的 `Prepare` 可以包含驗證用資料；真正送往 OpenAI 的內容，以各階段 `Contract.Request` 的白名單為準。介面的「查看 request」顯示這份實際請求，不包含 API key。Step 4 不傳出生日期、地址或完整判讀引用；逐字資料只傳一次，不對每個候選重複送研究連結。Step 5 不傳整段備註、命盤或筆畫。使用者自由文字可能自行含個資，不宣稱白名單能自動匿名化所有文字。
+服務內部的 `Prepare` 可以包含驗證用資料；真正送往模型服務的內容，以各階段 `Contract.Request` 的白名單為準。介面的「查看 request」顯示這份實際請求，不包含 API key。Step 4 不傳出生日期、地址或完整判讀引用；逐字資料只傳一次，不對每個候選重複送研究連結。Step 5 不傳整段備註、命盤或筆畫。使用者自由文字可能自行含個資，不宣稱白名單能自動匿名化所有文字。
+
+## 模型服務 adapter
+
+程式碼在 [ModelAdapters.cs](../src/OnlyFate.Database/ModelAdapters.cs) 與 [ModelTransports.cs](../src/OnlyFate.Database/ModelTransports.cs)。`ModelCallRunner` 只讀 adapter 整理好的結果（完成／拒答／未完成、輸出文字、上游 ID、實際模型、usage），不解析任何廠商的 JSON。
+
+| | OpenAI | Claude（Anthropic） |
+|---|---|---|
+| Adapter／transport | `OpenAiResponsesAdapter`／`OpenAiResponsesClient` | `ClaudeMessagesAdapter`／`ClaudeMessagesClient` |
+| Endpoint | `POST https://api.openai.com/v1/responses`，`Authorization: Bearer` | `POST https://api.anthropic.com/v1/messages`，`x-api-key` 與 `anthropic-version: 2026-10-21` |
+| 指令與資料 | `instructions`＋`input[0]` | `system`＋`messages[0]` |
+| 結構化輸出 | `text.format`（`json_schema`、`strict=true`、`name`），`store=false` | `output_config.format`（`json_schema`）；沒有 `store` 參數 |
+| 輸出上限 | 契約值（4000／6000） | 至少 16000：新模型預設會思考，思考 token 計入 `max_tokens` |
+| 完成判斷 | `status=completed` | `stop_reason=end_turn`；`refusal` 為拒答，`max_tokens` 等其他值為未完成 |
+| `ExecutionCall.Provider／Operation` | `OpenAI`／`responses.create` | `Anthropic`／`messages.create` |
+| 環境變數 | `OPENAI_MODEL`／`OPENAI_API_KEY` | `ANTHROPIC_MODEL`／`ANTHROPIC_API_KEY` |
+
+Claude structured outputs 只支援陣列 `minItems` 0 或 1，不支援 `maxItems`。adapter 送出前移除這兩項，改寫成 `description`（例如「必須恰好 2 項」）提示模型；兩組方案、四個替代、五個示例、至多兩種五行等數量，原本就由各階段 C# 驗證強制檢查，不因此放寬。
+
+兩家都只送一則 user 訊息、不提供 tools、不自動重試。Claude 沒有啟用 server-side fallback：拒答依本專案規則停止並保存紀錄，不換模型重答。模型 ID 由使用者輸入，程式沒有預設模型。
 
 ## 一次呼叫如何完成？
 

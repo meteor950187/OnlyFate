@@ -20,7 +20,7 @@
 
 - 第一版採 Windows 本機應用程式與 SQLite，優先降低安裝及維運負擔；不以架站、公開 API 或雲端資料庫作為前提。
 - 桌面介面採 C#／WPF，使用 WebView2 顯示本機 HTML／CSS 報告；詳細技術與操作入口依文件路由按需載入。
-- 案件資料保存在本機；OpenAI API 呼叫仍需連網，不宣稱整個流程可離線運作。
+- 案件資料保存在本機；模型 API（OpenAI 或 Claude）呼叫仍需連網，不宣稱整個流程可離線運作。
 - 桌面與資料設計慣例見 [開發慣例](docs/development-conventions.md)；不預先建立雙資料庫支援或搬移架構。
 - DB 欄位定義以 database/migrations 的 SQL 為準，設計見 [Schema 規劃](docs/database-schema.md)。已套用 migration 不改寫；不使用 stored procedure，邏輯參照的存在性與跨表寫入由 C# 在交易內驗證。
 - 只建立目前需求需要的程式、目錄與依賴；不預建空模組或為未成立需求加入抽象。

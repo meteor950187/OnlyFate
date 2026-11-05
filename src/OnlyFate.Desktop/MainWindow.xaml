@@ -102,8 +102,10 @@
                             <ScrollViewer VerticalScrollBarVisibility="Auto">
                                 <StackPanel Margin="16">
                                     <TextBlock Text="Step 3｜試行判讀" FontSize="20" FontWeight="SemiBold" />
-                                    <TextBlock Text="規則尚未完成案例驗證，結果僅供開發檢查，不直接作為正式選名依據。按開始會將本次必要案件資料及備註送往 OpenAI。" TextWrapping="Wrap" Margin="0,10,0,16" />
-                                    <TextBlock Text="共用 OpenAI 模型 ID（Step 3–5）" />
+                                    <TextBlock Text="規則尚未完成案例驗證，結果僅供開發檢查，不直接作為正式選名依據。按開始會將本次必要案件資料及備註送往下方選擇的模型服務。" TextWrapping="Wrap" Margin="0,10,0,16" />
+                                    <TextBlock Text="模型服務（Step 3–5 共用）" />
+                                    <ComboBox x:Name="AnalysisProvider" MinHeight="30" Margin="0,6,0,12" SelectionChanged="ChangeProvider" />
+                                    <TextBlock Text="共用模型 ID（Step 3–5）" />
                                     <TextBox x:Name="AnalysisModel" MinHeight="30" Margin="0,6,0,12" />
                                     <TextBlock Text="API key（僅本次程式使用，不儲存）" />
                                     <PasswordBox x:Name="AnalysisKey" MinHeight="30" Margin="0,6,0,12" />

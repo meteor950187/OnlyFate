@@ -21,7 +21,7 @@ Step 3 是目前設計中第一次呼叫 AI。Step 1 與 Step 2 沒有先前的 
 
 1. **固定資料**：使用者啟動判讀後，程式讀取已儲存的案件版本及其通過檢查的 Step 2 結果。未儲存修改、命盤缺漏或規則未備齊時，不呼叫 AI。
 2. **準備 context**：讀入固定版本的任務指令與判讀規則，再放入本步需要的案件欄位、命盤及備註原文。資料以明確欄位分開，不讓模型自行讀 SQLite、找檔案或補上規則。
-3. **記錄並送出**：先在本機記錄本次輸入與設定，再由 C# 呼叫 OpenAI API。這個階段不向模型提供 MCP 或網頁工具；Step 2 計算已由程式完成。
+3. **記錄並送出**：先在本機記錄本次輸入與設定，再由 C# 呼叫所選的模型 API（OpenAI 或 Claude，見 [AI 呼叫流程](ai-call-flow.md#模型服務-adapter)）。這個階段不向模型提供 MCP 或網頁工具；Step 2 計算已由程式完成。
 4. **讀取回傳**：先確認 API 是否完成、是否拒答或被截斷，再解析模型輸出的 JSON；不是收到 HTTP 成功就算判讀成功。
 5. **程式檢查**：按下方格式、事實、規則引用及一致性檢查；另外確認案件版本沒有在等待期間被更新。
 6. **採用或停止**：通過檢查且無阻擋議題才保存可供 Step 4 使用的結果；失敗保存原因。單純未採用備註不構成命理判讀失敗。
@@ -103,9 +103,9 @@ context 與呼叫生命週期已實作；試行 prompt 與 schema 已版本化�
 
 ## 目前實作與操作（2026-11-03）
 
-- 介面「AI 試行判讀」可填入模型 ID 與 API key；也可使用 OPENAI_MODEL／OPENAI_API_KEY 環境變數。key 僅存在本次程序記憶體，送出後清空 PasswordBox，不寫檔或 SQLite。尚未提供憑證永久保存。
-- 「查看本次 context」顯示實際 request 的指令、資料與 schema，不包含 key，也不呼叫網路；「開始試行判讀」才送往 OpenAI。沒有預設模型，請使用帳戶可用且支援 Structured Outputs 的模型 ID。
-- C# HttpClient 直接呼叫官方 Responses endpoint，停用 redirect，不引入模型 SDK 或隱含重試。store=false，輸出上限 6000 tokens，兩次呼叫共用 120 秒期限，可取消；數值為初始操作上限，未做真實延遲／成本調校。
+- 介面「AI 試行判讀」可選擇模型服務並填入模型 ID 與 API key；也可使用該服務的環境變數（OPENAI_MODEL／OPENAI_API_KEY 或 ANTHROPIC_MODEL／ANTHROPIC_API_KEY）。切換服務會清除本次輸入的 key。key 僅存在本次程序記憶體，送出後清空 PasswordBox，不寫檔或 SQLite。尚未提供憑證永久保存。
+- 「查看本次 context」顯示實際 request 的指令、資料與 schema，不包含 key，也不呼叫網路；「開始試行判讀」才送往所選服務。沒有預設模型，請使用帳戶可用且支援 Structured Outputs 的模型 ID。
+- C# HttpClient 直接呼叫官方 endpoint，停用 redirect，不引入模型 SDK 或隱含重試。OpenAI 為 store=false、輸出上限 6000 tokens；Claude 輸出上限 16000 tokens（含思考）。兩次呼叫共用 120 秒期限，可取消；數值為初始操作上限，未做真實延遲／成本調校。
 - 指令、R1–R5 試行規則與 schema 位於 AnalysisContract.cs；schema 版本 analysis-output-v2。摘要、方向、限制、證據引用、備註處理、namingElements 與阻擋議題是固定欄位。namingElements 只接受不重複的零至兩種五行；有 blockingIssues 時必須為空。規則尚不構成已驗證的喜用神演算法。
 - 每次啟動另建 Step 3 run，InputJson 固定 sourceChartRunId、CaseRevisionID、政策與 context，RuleSetVersion 保存試行版本；原始回應與 usage 放 ExecutionCall。成功前在交易內再核對案件版本與最新成功命盤。
 - 判讀完成僅表示通過格式與引用檢查；OutputJson 永遠附 ruleStatus=experimental／canProceed=false。只有 namingElements 非空且無 blockingIssues 才 canTrialProceed=true；舊版缺少結構化方向時須重新判讀，不從文字猜方向。試行狀態不是命局本身的矛盾，真實方法衝突仍須停止。格式或引用錯誤最多修正一次，其餘失敗不自動重送。

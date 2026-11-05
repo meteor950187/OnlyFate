@@ -8,14 +8,21 @@ namespace OnlyFate.Desktop;
 public partial class MainWindow
 {
  private ReportArtifactService Artifacts()=>new(databasePath,Path.Combine(dataRoot,"Reports"));
- private string ModelId()=>AnalysisModel.Text.Trim().Length>0?AnalysisModel.Text.Trim():Environment.GetEnvironmentVariable("OPENAI_MODEL")??"";
- private bool AllowRealCalls(){if(!isDemo)return true;CaseMessage.Text="離線虛構示範禁止呼叫 OpenAI 或 OpenFate；請使用已保存的原案查看報告。";return false;}
- private bool TryCredential(out string key,out string model)
+ private ModelProvider Provider()=>AnalysisProvider.SelectedItem as ModelProvider??ModelProvider.OpenAi;
+ private string ModelId()=>AnalysisModel.Text.Trim().Length>0?AnalysisModel.Text.Trim():Environment.GetEnvironmentVariable(Provider().ModelVariable)??"";
+ private void ChangeProvider(object sender,System.Windows.Controls.SelectionChangedEventArgs e)
+ {
+  // 不同服務的 key 不可共用；切換時清除本次輸入，模型 ID 改讀該服務的環境變數。
+  workflow.ClearCredential();AnalysisKey.Clear();
+  if(!isDemo)AnalysisModel.Text=Environment.GetEnvironmentVariable(Provider().ModelVariable)??"";
+ }
+ private bool AllowRealCalls(){if(!isDemo)return true;CaseMessage.Text="離線虛構示範禁止呼叫模型服務或 OpenFate；請使用已保存的原案查看報告。";return false;}
+ private bool TryCredential(out ModelProvider provider,out string key,out string model)
  {
   if(AnalysisKey.Password.Trim().Length>0){workflow.SetCredential(AnalysisKey.Password.Trim());AnalysisKey.Clear();}
-  key=workflow.Credential.Length>0?workflow.Credential:Environment.GetEnvironmentVariable("OPENAI_API_KEY")??"";model=ModelId();
+  provider=Provider();key=workflow.Credential.Length>0?workflow.Credential:Environment.GetEnvironmentVariable(provider.KeyVariable)??"";model=ModelId();
   if(key.Length>0&&model.Length>0)return true;
-  CaseMessage.Text="請在判讀頁輸入共用模型 ID 與 API key，或設定 OPENAI_MODEL／OPENAI_API_KEY。";return false;
+  CaseMessage.Text=$"請在判讀頁輸入共用模型 ID 與 API key，或設定 {provider.ModelVariable}／{provider.KeyVariable}。";return false;
  }
  private void ClearCredential(object sender,RoutedEventArgs e){workflow.ClearCredential();AnalysisKey.Clear();CaseMessage.Text="已清除本次輸入的 API key；環境變數仍由系統管理。";}
  private void ResetNaming(){NamingDetails.Clear();NamingStatus.Text="請先完成可繼續試行的判讀。";ResetReport();}
@@ -31,7 +38,7 @@ public partial class MainWindow
  private async Task PreviewRequest(int step)
  {
   if(!CanUseSavedCase())return;SetCaseBusy(true,"正在準備實際 request，尚未呼叫 API…");
-  try {long id=activeCaseId!.Value,revision=activeRevisionId!.Value;string model=ModelId();var request=await Task.Run(()=>step==4?NamingContract.Request(model,new Step4Service(databasePath).Prepare(id,revision)):ReportContract.Request(model,new Step5Service(databasePath).Prepare(id,revision)));ShowRequest(request);}
+  try {long id=activeCaseId!.Value,revision=activeRevisionId!.Value;string model=ModelId();var adapter=Provider().Adapter;var request=await Task.Run(()=>adapter.BuildRequest(step==4?NamingContract.Request(model,new Step4Service(databasePath).Prepare(id,revision)):ReportContract.Request(model,new Step5Service(databasePath).Prepare(id,revision))));ShowRequest(request);}
   catch(Exception e){CaseMessage.Text=SafeError(e);}finally{SetCaseBusy(false);}
  }
  private async void PreviewNaming(object sender,RoutedEventArgs e)=>await PreviewRequest(4);
@@ -40,14 +47,14 @@ public partial class MainWindow
  private async void GenerateReport(object sender,RoutedEventArgs e)=>await RunModelStep(5);
  private async Task RunModelStep(int step)
  {
-  if(!CanUseSavedCase()||!AllowRealCalls()||!TryCredential(out string key,out string model))return;
+  if(!CanUseSavedCase()||!AllowRealCalls()||!TryCredential(out var provider,out string key,out string model))return;
   if(step==4)ResetNaming();else ResetReport();
   long id=activeCaseId!.Value,revision=activeRevisionId!.Value;
   using var cancellation=new CancellationTokenSource();chartCancellation=cancellation;CancelChartButton.Visibility=Visibility.Visible;CancelChartButton.Content="取消處理";
   SetCaseBusy(true,step==4?"正在試行選名，可取消…":"正在生成試行報告，可取消…");
   try {
-   using var http=new HttpClient(new HttpClientHandler{AllowAutoRedirect=false}){Timeout=Timeout.InfiniteTimeSpan};var client=new OpenAiResponsesClient(http,key);
-   var result=await Task.Run(()=>step==4?new Step4Service(databasePath).ExecuteAsync(id,revision,model,client,cancellation.Token):new Step5Service(databasePath).ExecuteAsync(id,revision,model,client,cancellation.Token));
+   using var http=new HttpClient(new HttpClientHandler{AllowAutoRedirect=false}){Timeout=Timeout.InfiniteTimeSpan};var connection=provider.Connect(http,key);
+   var result=await Task.Run(()=>step==4?new Step4Service(databasePath).ExecuteAsync(id,revision,model,connection,cancellation.Token):new Step5Service(databasePath).ExecuteAsync(id,revision,model,connection,cancellation.Token));
    cancellation.Token.ThrowIfCancellationRequested();
    if(step==4)ShowNaming(result);else await ShowReport(result,cancellation.Token);
    CaseMessage.Text="試行結果已儲存；正式交付資格仍未開放。";
